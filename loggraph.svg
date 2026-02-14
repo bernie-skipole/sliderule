@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="800"
+   height="600"
+   version="1.1"
+   id="svg72"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs76" />
+  <style
+     id="style2">text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      font-weight: Thin;
+    }
+</style>
+  <rect
+     width="800"
+     height="600"
+     x="0"
+     y="0"
+     fill="white"
+     id="rect4" />
+  <rect
+     width="672"
+     height="480"
+     x="48"
+     y="48"
+     fill="white"
+     id="rect6" />
+  <line
+     x1="48.711403"
+     y1="527.14185"
+     x2="719.71143"
+     y2="527.14185"
+     style="stroke:#808080;stroke-width:1"
+     id="line42" />
+  <line
+     x1="48"
+     y1="525"
+     x2="48"
+     y2="534"
+     style="stroke:black;stroke-width:1"
+     id="line10" />
+  <line
+     x1="216"
+     y1="525"
+     x2="216"
+     y2="534"
+     style="stroke:black;stroke-width:1"
+     id="line12" />
+  <line
+     x1="384"
+     y1="525"
+     x2="384"
+     y2="534"
+     style="stroke:black;stroke-width:1"
+     id="line14" />
+  <line
+     x1="552"
+     y1="525"
+     x2="552"
+     y2="534"
+     style="stroke:black;stroke-width:1"
+     id="line16" />
+  <line
+     x1="720"
+     y1="525"
+     x2="720"
+     y2="534"
+     style="stroke:black;stroke-width:1"
+     id="line18" />
+  <line
+     x1="48"
+     y1="48"
+     x2="48"
+     y2="529"
+     style="stroke:black;stroke-width:3"
+     id="line20" />
+  <line
+     x1="42"
+     y1="48"
+     x2="51"
+     y2="48"
+     style="stroke:black;stroke-width:1"
+     id="line22" />
+  <line
+     x1="42"
+     y1="168"
+     x2="51"
+     y2="168"
+     style="stroke:black;stroke-width:1"
+     id="line24" />
+  <line
+     x1="42"
+     y1="288"
+     x2="51"
+     y2="288"
+     style="stroke:black;stroke-width:1"
+     id="line26" />
+  <line
+     x1="42"
+     y1="408"
+     x2="51"
+     y2="408"
+     style="stroke:black;stroke-width:1"
+     id="line28" />
+  <line
+     x1="42"
+     y1="528"
+     x2="51"
+     y2="528"
+     style="stroke:black;stroke-width:1"
+     id="line30" />
+  <line
+     x1="216"
+     y1="48"
+     x2="216"
+     y2="527"
+     style="stroke:grey;stroke-width:1"
+     id="line32" />
+  <line
+     x1="384"
+     y1="48"
+     x2="384"
+     y2="527"
+     style="stroke:grey;stroke-width:1"
+     id="line34" />
+  <line
+     x1="552"
+     y1="48"
+     x2="552"
+     y2="527"
+     style="stroke:grey;stroke-width:1"
+     id="line36" />
+  <line
+     x1="720"
+     y1="48"
+     x2="720"
+     y2="527"
+     style="stroke:grey;stroke-width:1"
+     id="line38" />
+  <line
+     x1="49"
+     y1="408"
+     x2="720"
+     y2="408"
+     style="stroke:grey;stroke-width:1"
+     id="line40" />
+  <line
+     x1="49"
+     y1="168"
+     x2="720"
+     y2="168"
+     style="stroke:grey;stroke-width:1"
+     id="line44" />
+  <line
+     x1="49"
+     y1="48"
+     x2="720"
+     y2="48"
+     style="stroke:grey;stroke-width:1"
+     id="line46" />
+  <text
+     x="194.94301"
+     y="320.32419"
+     fill="#000000"
+     id="text50">2.0</text>
+  <text
+     x="362.5535"
+     y="323.68451"
+     fill="#000000"
+     id="text52">4.0</text>
+  <text
+     x="531.34125"
+     y="322.47864"
+     fill="#000000"
+     id="text54">6.0</text>
+  <text
+     x="698.67621"
+     y="323.87015"
+     fill="#000000"
+     id="text56">8.0</text>
+  <text
+     x="38"
+     y="52"
+     fill="black"
+     text-anchor="end"
+     id="text58">4</text>
+  <text
+     x="38"
+     y="172"
+     fill="black"
+     text-anchor="end"
+     id="text60">2</text>
+  <text
+     x="38"
+     y="292"
+     fill="black"
+     text-anchor="end"
+     id="text62">0</text>
+  <text
+     x="38"
+     y="412"
+     fill="black"
+     text-anchor="end"
+     id="text64">-2</text>
+  <text
+     x="38"
+     y="532"
+     fill="black"
+     text-anchor="end"
+     id="text66">-4</text>
+  <polyline
+     style="fill:none;stroke:black;stroke-width:3"
+     points="56,487 65,427 73,392 82,367 90,348 98,332 107,319 115,307 124,297 132,288 140,280 149,272 157,265 166,259 174,253 182,247 191,242 199,237 208,232 216,228 224,224 233,220 241,216 250,212 258,209 266,205 275,202 283,199 292,196 300,193 308,190 317,187 325,185 334,182 342,180 350,177 359,175 367,172 376,170 384,168 392,166 401,164 409,162 418,160 426,158 434,156 443,154 451,152 460,150 468,149 476,147 485,145 493,144 502,142 510,140 518,139 527,137 535,136 544,134 552,133 560,131 569,130 577,129 586,127 594,126 602,125 611,123 619,122 628,121 636,120 644,118 653,117 661,116 670,115 678,114 686,112 695,111 703,110 712,109 720,108"
+     id="polyline68" />
+  <text
+     x="768"
+     y="48"
+     fill="black"
+     font-weight="Thin"
+     id="text70" />
+  <line
+     x1="46.756802"
+     y1="288.53336"
+     x2="719.75677"
+     y2="288.53336"
+     style="stroke:#000000;stroke-width:3"
+     id="line8" />
+  <text
+     xml:space="preserve"
+     style="font-size:74.6667px;font-family:MathJax_Caligraphic;-inkscape-font-specification:'MathJax_Caligraphic, Normal';white-space:pre;inline-size:33.1425;display:inline;fill:#000000;stroke:#000000;stroke-width:2.89134"
+     x="747.7652"
+     y="288.56146"
+     id="text577" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.3166px;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';fill:#000000;stroke:none;stroke-width:5.32865"
+     x="734.60162"
+     y="295.46436"
+     id="text585"
+     transform="scale(1.0032451,0.99676543)"><tspan
+       id="tspan583"
+       x="734.60162"
+       y="295.46436"
+       style="stroke-width:5.32865">x</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';baseline-shift:baseline;fill:#000000;stroke:none;stroke-width:2.89134"
+     x="54.648022"
+     y="26.654633"
+     id="text1201"><tspan
+       id="tspan1199"
+       x="54.648022"
+       y="26.654633">Log x</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.2888px;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';fill:#000000;stroke:none;stroke-width:2.07212"
+     x="97.309357"
+     y="33.496269"
+     id="text1209"
+     transform="scale(0.97003776,1.0308877)"><tspan
+       id="tspan1207"
+       x="97.309357"
+       y="33.496269"
+       style="stroke-width:2.07212">2</tspan></text>
+</svg>

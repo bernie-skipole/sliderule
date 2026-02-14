@@ -1,0 +1,1160 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip halfline
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Slide Rule
+\end_layout
+
+\begin_layout Author
+Bernard Czenkusz
+\end_layout
+
+\begin_layout Section
+First the nitty gritty
+\end_layout
+
+\begin_layout Standard
+To understand the action of a slide rule we have to start from Logarithms.
+ I'm using the term Logarithm and log interchangeably.
+ Logarithm may be the correct term,
+ but everyone I know always calls them logs.
+\end_layout
+
+\begin_layout Standard
+Consider the two equations:
+\begin_inset Formula 
+\[
+y=\log_{b}x
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+x=b^{y}
+\]
+
+\end_inset
+
+
+\emph on
+These say the same thing
+\emph default
+,
+ one gives 
+\begin_inset Formula $y$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $x$
+\end_inset
+
+ (and 
+\begin_inset Formula $b$
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+The other gets 
+\begin_inset Formula $x$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $y$
+\end_inset
+
+ (and 
+\begin_inset Formula $b$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+In this case 
+\begin_inset Formula $b$
+\end_inset
+
+ is called the base of the log,
+\begin_inset Newline newline
+\end_inset
+
+and putting 
+\begin_inset Formula $x=b^{y}$
+\end_inset
+
+ into that first equation:
+\begin_inset Formula 
+\[
+y=\log_{b}b^{y}
+\]
+
+\end_inset
+
+So an example:
+\begin_inset Formula 
+\[
+8=2^{3}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+3=\log_{2}8
+\]
+
+\end_inset
+
+To illustrate this,
+ here's a graph of 
+\begin_inset Formula $\log_{2}x$
+\end_inset
+
+ against 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename loggraph.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A point to notice is that no negative 
+\begin_inset Formula $x$
+\end_inset
+
+ values are plotted.
+ Logarithms are not defined for negative 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ but the logs themselves do take negative values as 
+\begin_inset Formula $x$
+\end_inset
+
+ becomes less than 1.0
+\begin_inset Formula 
+\[
+0.5=2^{-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-1=\log_{2}0.5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The heart of the matter
+\end_layout
+
+\begin_layout Standard
+Here's the magic,
+ take two numbers 
+\begin_inset Formula $c=b^{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $d=b^{q}$
+\end_inset
+
+,
+ so therefore:
+\begin_inset Formula 
+\[
+p=\log_{b}c
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+q=\log_{b}d
+\]
+
+\end_inset
+
+We know
+\begin_inset Formula 
+\[
+cd=b^{p}b^{q}=b^{p+q}
+\]
+
+\end_inset
+
+To illustrate:
+\begin_inset Formula 
+\[
+8\times4=2^{3}\times2^{2}=2\times2\times2\times2\times2=2^{5}=32
+\]
+
+\end_inset
+
+Taking the log of both sides,
+ and noting that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $y=\log_{b}b^{y}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\[
+\log_{b}b^{p}b^{q}=\log_{b}b^{p+q}=p+q
+\]
+
+\end_inset
+
+therefore
+\begin_inset Formula 
+\[
+\log_{b}cd=p+q
+\]
+
+\end_inset
+
+But we know 
+\begin_inset Formula $p=\log_{b}c$
+\end_inset
+
+ and 
+\begin_inset Formula $q=\log_{b}d$
+\end_inset
+
+ so lets go all the way
+\begin_inset Formula 
+\[
+\log_{b}cd=\log_{b}c+\log_{b}d
+\]
+
+\end_inset
+
+So that means we are mapping the multiplication of two numbers,
+ to an addition!
+ Which is the basis of how a slide rule works.
+\end_layout
+
+\begin_layout Standard
+The problem seems to be twofold,
+ we need to find the logs of any two numbers,
+ and after adding them,
+ we get the log of their product - so we need to get back to the desired product from its log - that is,
+ we need to get the anti-log.
+\end_layout
+
+\begin_layout Standard
+So how do we get logs and antilogs?
+ There are techniques such as power series that converge on the logarithm of a value,
+ however for this article,
+ we don't bother,
+ a slide rule has logarithms built-in,
+ the length along a slide rule is the 
+\begin_inset Formula $log_{10}$
+\end_inset
+
+ of the number inscribed on the rule.
+ More of this later.
+\end_layout
+
+\begin_layout Standard
+As a school child everyone over a certain age had a booklet of 'Logarithmic Tables' which also included anti-log and trigonometric 'four-figure' tables.
+ Ask your granddad.
+ 
+\end_layout
+
+\begin_layout Standard
+To continue,
+ how about division:
+\begin_inset Formula 
+\[
+\frac{c}{d}=\frac{b^{p}}{b^{q}}=b^{p}b^{-q}=b^{p-q}
+\]
+
+\end_inset
+
+And that leads to
+\begin_inset Formula 
+\[
+\log_{b}\frac{c}{d}=\log_{b}b^{p-q}=p-q=\log_{b}c-\log_{b}d
+\]
+
+\end_inset
+
+So division maps to subtraction,
+ that's neat.
+\end_layout
+
+\begin_layout Standard
+Now let's look at another sweet property.
+ Starting again from:
+\begin_inset Formula 
+\[
+x=b^{y}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x^{n}=b^{ny}
+\]
+
+\end_inset
+
+Take the log of both sides:
+\begin_inset Formula 
+\[
+\log_{b}x^{n}=\log_{b}b^{ny}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\log_{b}x^{n}=ny
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\log_{b}x^{n}=n\log_{b}x
+\]
+
+\end_inset
+
+We've reduced finding a power to a multiplication!
+ The schoolboy would have to look up the log of a number 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ do the 
+\begin_inset Formula $n$
+\end_inset
+
+ multiplication,
+ and then look up the anti-log to get the final result 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+,
+ but that's a powerful technique.
+ As n can be fractional,
+ this includes roots as well.
+\end_layout
+
+\begin_layout Standard
+And if we really want to push the boat out,
+ we can do that 
+\begin_inset Formula $n$
+\end_inset
+
+ times multiplication with logs:
+\begin_inset Formula 
+\[
+\log_{a}\log_{b}x^{n}=\log_{a}n+\log_{a}\log_{b}x
+\]
+
+\end_inset
+
+I've introduced another base 
+\begin_inset Formula $a$
+\end_inset
+
+ here,
+ just to show that the multiplication is not necessarily in base 
+\begin_inset Formula $b$
+\end_inset
+
+ again.
+\end_layout
+
+\begin_layout Standard
+So there's a few things to notice:
+\end_layout
+
+\begin_layout Itemize
+The multiplication to addition property works for any base 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{b}1=0$
+\end_inset
+
+ for any base,
+ since 
+\begin_inset Formula $b^{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{b}b=1$
+\end_inset
+
+ for any base,
+ since 
+\begin_inset Formula $b^{1}=b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{b}x^{n}=n\log_{b}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you check the earlier graph,
+ you can see these points in action.
+ For further information about logarithms,
+ a good description is given at 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+All about bases
+\end_layout
+
+\begin_layout Standard
+So lets dive a bit deeper into that base number 
+\begin_inset Formula $b$
+\end_inset
+
+,
+ especially with respect to slide rules.
+ First we'll show that changing bases is surprisingly easy.
+\end_layout
+
+\begin_layout Standard
+Starting from these two again:
+\begin_inset Formula 
+\[
+y=\log_{b}x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x=b^{y}
+\]
+
+\end_inset
+
+Take the log (of base 
+\begin_inset Formula $c$
+\end_inset
+
+) of both sides
+\begin_inset Formula 
+\[
+\log_{c}x=\log_{c}b^{y}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\log_{c}x=y\log_{c}b
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\log_{c}x}{\log_{c}b}=y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\log_{c}x}{\log_{c}b}=\log_{b}x
+\]
+
+\end_inset
+
+So if someone has kindly created a table of logarithms to base 
+\begin_inset Formula $c$
+\end_inset
+
+,
+ then creating a new table of logarithms to base 
+\begin_inset Formula $b$
+\end_inset
+
+ is simply a matter of dividing by a constant 
+\begin_inset Formula $\log_{c}b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Logs to base e,
+ the exponential constant,
+ are used all over the place by physicists and mathematicians.
+ However the base we are particularly interested in is base 10,
+ and we'll now explore why.
+ From the previous section we now use 10 instead of b:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x=10^{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y=\log_{10}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{10}1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{10}10=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{10}x^{n}=n\log_{10}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{10}10^{n}=n\log_{10}10=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I'll just use 
+\begin_inset Formula $\log$
+\end_inset
+
+ from now on,
+ rather than 
+\begin_inset Formula $\log_{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We see that the values 
+\begin_inset Formula $\log1$
+\end_inset
+
+ to 
+\begin_inset Formula $\log10$
+\end_inset
+
+ will span the range 0 to 1.
+\end_layout
+
+\begin_layout Standard
+Or put another way,
+ 
+\begin_inset Formula $1=10^{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $10=10^{1}$
+\end_inset
+
+ and an intermediate value 
+\begin_inset Formula $5=10^{0.7}$
+\end_inset
+
+(approx).
+\end_layout
+
+\begin_layout Standard
+Given an 
+\begin_inset Formula $x$
+\end_inset
+
+ value in this range of 1 to 10:
+\begin_inset Formula 
+\[
+0\leqq\log x\leqq1
+\]
+
+\end_inset
+
+So what about 
+\begin_inset Formula $10x$
+\end_inset
+
+?
+\begin_inset Formula 
+\[
+\log10x=\log10+\log x=1+\log x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+1\leqq\log10x\leqq2
+\]
+
+\end_inset
+
+and it follows
+\begin_inset Formula 
+\[
+3\leqq\log100x\leqq4
+\]
+
+\end_inset
+
+So in general,
+ if you have calculated the logs of all values between 1 and 10,
+ by simply adding unit values you get all logs for any number greater than 1
+\end_layout
+
+\begin_layout Standard
+The logs of the numbers 10 to 100 are simply one added to the logs of the numbers 1 to 10.
+\end_layout
+
+\begin_layout Standard
+The logs of the numbers 100 to 1000 are simply two added to the logs of the numbers 1 to 10.
+\end_layout
+
+\begin_layout Standard
+It works the other way as well,
+ the logarithms of 0.1 to 1 are one subtracted from the logarithms of the numbers 1 to 10.
+\end_layout
+
+\begin_layout Standard
+The basis of a slide rule is that 
+\begin_inset Formula $x$
+\end_inset
+
+ values are inscribed,
+ with the distance from the left of each point being the 
+\begin_inset Formula $\log x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $x$
+\end_inset
+
+ numbers shown on the rule are therefore the antilogs of the distance along the rule.
+\end_layout
+
+\begin_layout Standard
+To get every number inscribed would take an infinitely long ruler,
+ which could be unwieldy.
+ Below is an image of 
+\begin_inset Formula $x$
+\end_inset
+
+ values from 1.0 to 1000.0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename bigrule.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You might notice there is a level of redundancy here,
+ values from 10.0 to 100.0 do not give any extra information,
+ other than the power of 10,
+ and similarly 100.0 to 1000.0 is just another repeat.
+\end_layout
+
+\begin_layout Standard
+So slide rules can take advantage of this,
+ by just having the numbers 1 to 10 inscribed along the rule.
+\end_layout
+
+\begin_layout Standard
+There is a disadvantage;
+ the slide rule can be used to add (or subtract) the Mantissa (the fractional part) of the logarithm,
+ and ignore the exponent (the units).
+ This means that the result does not give the powers of ten information.
+\end_layout
+
+\begin_layout Standard
+So 9 x 7 may give 63,
+ but the slide rule will not tell you if it is 6.3,
+ or 63,
+ or 630 etc.,
+\end_layout
+
+\begin_layout Standard
+And again for 90 x 7,
+ the slide rule will not tell you if it is 6.3,
+ or 63,
+ or 630 etc.,
+\end_layout
+
+\begin_layout Standard
+So to use a slide rule you also need to use the mark 1 brain to figure out where that decimal point lies.
+\end_layout
+
+\begin_layout Section
+Using the Slide rule
+\end_layout
+
+\begin_layout Subsection
+Multiplication
+\end_layout
+
+\begin_layout Standard
+To multiply two numbers using a slide rule,
+ you add the two associated lengths together - the length of a slide rule being the log of the number.
+ The two lengths together give another length (the log of the product),
+ and from that resultant length you can just read off the result.
+ So you need two slide rules,
+ or,
+ as I'm sure you know,
+ the slide rule is made up of sliding parts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename tworule.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By aligning the 1 of scale C above to the 2 of scale D,
+ we have added the 
+\begin_inset Formula $\log2$
+\end_inset
+
+ distance to scale C.
+\end_layout
+
+\begin_layout Standard
+By moving along C to any number,
+ say 3,
+ we have added the log of 3.
+ Then reading down onto scale D - which is now the length of 
+\begin_inset Formula $\log2+\log3,$
+\end_inset
+
+we can see the value of the product,
+ which in this case is 6.
+\end_layout
+
+\begin_layout Standard
+You would do the same thing if you were multiplying 20 by 30.
+ As discussed previously,
+ it is up to you to work out the decimal place.
+ 
+\end_layout
+
+\begin_layout Standard
+You may have spotted a problem with this.
+ What if we wanted 2x7?
+ The 7 on the C scale is beyond the end of the D scale.
+ So here's another magic trick:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename byseven.svg
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case the 10 of the C scale is positioned over the 7.
+ Then move to the 2 of the C scale,
+ and below it you can see the result 1.4
+\end_layout
+
+\begin_layout Standard
+As the slide rule is indifferent to powers of ten,
+ we have to figure the result is actually 14.
+\end_layout
+
+\begin_layout Standard
+So how are the logarithms being added in this method?
+\end_layout
+
+\begin_layout Standard
+By setting the 10 on to 7,
+ we have the length of the D scale,
+ which is 
+\begin_inset Formula $\log7$
+\end_inset
+
+,
+ but then traveling left on the C,
+ from 10 right back to 1,
+ we have subtracted 
+\begin_inset Formula $\log10$
+\end_inset
+
+.
+ Then traveling right on the C from 1 to 2,
+ we have added 
+\begin_inset Formula $\log2$
+\end_inset
+
+.
+ So we have actually done:
+\begin_inset Formula 
+\[
+\log7-\log10+\log2=\log\frac{7\times2}{10}
+\]
+
+\end_inset
+
+By moving the C scale left we are dividing by 10,
+ but we know to ignore this,
+ and so we have the result.
+\end_layout
+
+\begin_layout Standard
+In practice,
+ the usage is simple;
+ put either the 1 or the 10 of the sliding C scale over one number,
+ go to the other number on the sliding scale,
+ and read the result on the D scale.
+\end_layout
+
+\begin_layout Standard
+Earlier we mentioned '9 x 7 may give 63',
+ just for fun,
+ on the scale above,
+ you can see the 9 on C is above 6.3 on D.
+\end_layout
+
+\begin_layout Subsection
+Division
+\end_layout
+
+\begin_layout Standard
+We know division maps to subtraction with logs.
+\begin_inset Formula 
+\[
+\log\frac{c}{d}=\log c-\log d
+\]
+
+\end_inset
+
+So how to subtract distance on a slide rule?
+ Lets try six divided by four,
+ which is 1.5
+\end_layout
+
+\begin_layout Standard
+The distance to 6 of the D scale is 
+\begin_inset Formula $\log6$
+\end_inset
+
+,
+ move the 4 of the C scale above it,
+ and traveling back along the C scale to the 1 is equivalent to subtracting 
+\begin_inset Formula $\log4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename fourdivsix.svg
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the distance on the D scale is 
+\begin_inset Formula $\log6-\log4=\log1.5$
+\end_inset
+
+ and by reading the inscribed value,
+ which is the equivalent of reading the antilog,
+ we find 1.5.
+\end_layout
+
+\begin_layout Standard
+Notice,
+ though we see division as 
+\begin_inset Formula $\frac{6}{4}$
+\end_inset
+
+ the 6 is on the bottom scale,
+ and the four is above it.
+\end_layout
+
+\begin_layout Standard
+Again we have a problem,
+ what about 
+\begin_inset Formula $\frac{6}{8}$
+\end_inset
+
+ ?
+ Moving the 8 above the 6 leaves the 1 on the C scale beyond the D scale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename sixdiveight.svg
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However the 10 on C scale shows 7.5 on D,
+ and 0.75 is the right answer,
+ so how does that come about?
+\end_layout
+
+\begin_layout Standard
+6 on the D scale is equivalent to 
+\begin_inset Formula $\log6$
+\end_inset
+
+,
+ subtracting 
+\begin_inset Formula $\log8$
+\end_inset
+
+ takes you leftwards to C1,
+ then adding 
+\begin_inset Formula $\log10$
+\end_inset
+
+ takes you to C10.
+\begin_inset Formula 
+\[
+\log6-\log8+\log10=\log\frac{6\times10}{8}
+\]
+
+\end_inset
+
+Powers of ten do not bother us,
+ so reading the antilog on the D scale gives us 7.5,
+ which we realize means 0.75
+\end_layout
+
+\begin_layout Standard
+We can be confident that reading right along a scale from the leftmost 1 is adding logs (multiplying) and moving left to the leftmost 1 is subtracting logs (dividing).
+ If necessary to get a result,
+ add or subtract the entire scale,
+ which is the equivalent of multiplying or dividing by 10.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "wikipedia"
+literal "false"
+
+\end_inset
+
+https://en.wikipedia.org/wiki/Logarithm
+\end_layout
+
+\end_body
+\end_document
