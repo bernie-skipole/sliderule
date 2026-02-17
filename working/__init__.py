@@ -6,6 +6,8 @@ from dataclasses import dataclass
 
 from .dscale import addDscale
 
+from .cscale import addCscale
+
 
 @dataclass
 class Rule:
@@ -17,7 +19,7 @@ class Rule:
     btmruleheight:int = 120
 
     leftmargin:int = 50
-    rightmargin:int = 30
+    rightmargin:int = 50
 
     mainmove:float = 0.0
     slidermove:float = 0.0

@@ -5,6 +5,8 @@ from . import make_rule
 
 from . import addDscale
 
+from . import addCscale
+
 
 if __name__ == "__main__":
 
@@ -14,6 +16,9 @@ if __name__ == "__main__":
 
     # Add a dscale
     doc = addDscale(doc, rl)
+
+    # Add a cscale
+    doc = addCscale(doc, rl)
 
     tree = ET.ElementTree(doc)
     tree.write(filename, xml_declaration=True)

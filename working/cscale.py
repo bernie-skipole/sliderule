@@ -3,32 +3,34 @@ import xml.etree.ElementTree as ET
 import math
 
 
-def _vertical(length, xpos, ytop, col="black") -> dict:
+def _vertical(length, xpos, ybot, col="black") -> dict:
     """length is the length of the vertical line
-       ytop is the starting y position
+       ybot is the ending y position
        xpos is the x position
        col is the colour of the line"""
-    return {"x1":str(xpos), "y1":str(ytop), "x2":str(xpos), "y2":str(ytop+length), "style":f"stroke:{col};stroke-width:1"}
+    return {"x1":str(xpos), "y1":str(ybot), "x2":str(xpos), "y2":str(ybot-length), "style":f"stroke:{col};stroke-width:1"}
 
 
-def addDscale(doc, rl) -> ET.Element:
-    "Adds the D scale to the bottom rule, returns the doc"
 
-    ytop = rl.topruleheight + rl.midruleheight # y value of top of scale
-    rightmove = rl.mainmove
 
-    # D mark
-    Dmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ytop+40),"fill":"black", "font-size":"24"})
-    Dmark.text = "D"
+def addCscale(doc, rl) -> ET.Element:
+    "Adds the C scale to the middle rule, returns the doc"
+
+    ybot = rl.topruleheight + rl.midruleheight # y value of bot of scale
+    rightmove = rl.slidermove
+
+    # C mark
+    Cmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ybot-30), "fill":"black", "font-size":"24"})
+    Cmark.text = "C"
 
     # Pi mark
     xpos = round(rightmove + rl.leftmargin + rl.scalewidth*math.log10(math.pi))
-    Pimark = ET.SubElement(doc, 'text', {"x":str(xpos-4), "y":str(ytop+55),"fill":"black", "font-size":"16"})
+    Pimark = ET.SubElement(doc, 'text', {"x":str(xpos-4), "y":str(ybot-47), "fill":"black", "font-size":"16"})
     Pimark.text = "\u03C0"
-    ET.SubElement(doc, 'line', _vertical(40, xpos, ytop))
+    ET.SubElement(doc, 'line', _vertical(40, xpos, ybot))
 
     # x mark
-    xmark = ET.SubElement(doc, 'text', {"x":str(rightmove  + rl.leftmargin + rl.scalewidth + 12), "y":str(ytop+40),"fill":"black", "font-size":"16"})
+    xmark = ET.SubElement(doc, 'text', {"x":str(rightmove  + rl.leftmargin + rl.scalewidth + 12), "y":str(ybot-32),"fill":"black", "font-size":"16"})
     xmark.text = "x"
 
     for r in range(0, 90000+1):
@@ -39,7 +41,7 @@ def addDscale(doc, rl) -> ET.Element:
         length = 0
         textstr = ''
         fontsize = 16
-        texty = ytop+95
+        texty = ybot-80
         if not r:                   # at x == 1, r = 0
             length = 70
             textstr = "1"
@@ -52,24 +54,24 @@ def addDscale(doc, rl) -> ET.Element:
             length = 60
             textstr = str(round(x))
             fontsize = 18
-            texty = ytop+80
+            texty = ybot-66
         elif r % 5000 == 0:         # at x = 1.5, 2.5, 3.5, etc 
             length = 50
             textstr = str(x)
             fontsize = 14
-            texty = ytop+65
+            texty = ybot-55
         elif r % 1000 == 0:         # at x = 1.1, 1.2, etc 
             length = 30
             if r < 10000:           # only do text for x<2, r <10000  
                 textstr = str(x)
                 fontsize = 12
-                texty = ytop+40
+                texty = ybot-33
         elif r < 20000:             # x < 3, r < 20000
             if r % 500 == 0:        # at x =1.05, 1.15, etc
                 length = 20
 
         if length:
-            vline = _vertical(length, xpos, ytop, col="black")
+            vline = _vertical(length, xpos, ybot, col="black")
             ET.SubElement(doc, 'line', vline)
         if textstr:
             if len(textstr) == 1:
@@ -80,4 +82,8 @@ def addDscale(doc, rl) -> ET.Element:
             tel.text = textstr
 
     return doc
+
+
+
+
 
