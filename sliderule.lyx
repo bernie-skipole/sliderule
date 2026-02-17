@@ -1014,8 +1014,8 @@ By setting the 10 on to 7,
 \end_inset
 
 By moving the C scale left we are dividing by 10,
- but we know to ignore this,
- and so we have the result.
+ but we know not to worry about this,
+ and so we have the significant digits of the result.
 \end_layout
 
 \begin_layout Standard
