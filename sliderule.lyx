@@ -914,12 +914,23 @@ To multiply two numbers using a slide rule,
 \end_layout
 
 \begin_layout Standard
-By aligning the 1 of scale C above to the 2 of scale D,
+By aligning the 1 of scale C above the 2 of scale D,
  we have added the 
 \begin_inset Formula $\log2$
 \end_inset
 
  distance to scale C.
+\end_layout
+
+\begin_layout Standard
+Remember that though we have put a '1' over the 2,
+ 
+\begin_inset Formula $\log1=0$
+\end_inset
+
+,
+ and so in terms of the lengths,
+ this is putting a zero over the 2 position.
 \end_layout
 
 \begin_layout Standard
