@@ -8,6 +8,8 @@ from .dscale import addDscale
 
 from .cscale import addCscale
 
+from .cfscale import addCFscale
+
 
 @dataclass
 class Rule:

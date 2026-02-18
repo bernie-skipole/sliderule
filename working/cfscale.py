@@ -1,0 +1,97 @@
+import xml.etree.ElementTree as ET
+
+import math
+
+
+def _vertical(length, xpos, ytop, col="black") -> dict:
+    """length is the length of the vertical line
+       ytop is the starting y position
+       xpos is the x position
+       col is the colour of the line"""
+    return {"x1":str(xpos), "y1":str(ytop), "x2":str(xpos), "y2":str(ytop+length), "style":f"stroke:{col};stroke-width:1"}
+
+
+def addCFscale(doc, rl) -> ET.Element:
+    "Adds the D scale to the bottom rule, returns the doc"
+
+    ytop = rl.topruleheight # y value of top of scale
+    rightmove = rl.slidermove
+
+    # CF mark
+    CFmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ytop+40),"fill":"black", "font-size":"24"})
+    CFmark.text = "CF"
+
+    # Pi mark
+    xpos = round(rightmove + rl.leftmargin)
+    Pimark = ET.SubElement(doc, 'text', {"x":str(xpos-4), "y":str(ytop+55),"fill":"black", "font-size":"16"})
+    Pimark.text = "\u03C0"
+    ET.SubElement(doc, 'line', _vertical(40, xpos, ytop))
+
+    # pix mark
+    pixmark = ET.SubElement(doc, 'text', {"x":str(rightmove  + rl.leftmargin + rl.scalewidth + 12), "y":str(ytop+40),"fill":"black", "font-size":"16"})
+    pixmark.text = "\u03C0x"
+
+    # start r
+    # r = (x-1)x10000
+    # r = (3.13 -1)x 10000  -- 3.13 to get beyond 3.1 but befor pi
+    # r = 21300
+
+    # end r
+    # r = (31 - 1)x 10000
+    # r = 300000
+
+
+    for r in range(21300, 300000+1):
+        # r is 0 to 90000   - this is along rule length
+        # x is 1 to 10 inclusive
+        x = 1 + r/10000
+        # move to the left by log pi
+        xpos = round(rightmove + rl.leftmargin + rl.scalewidth*math.log10(x) - rl.scalewidth*math.log10(math.pi))
+        length = 0
+        textstr = ''
+        fontsize = 16
+        texty = ytop+95
+        if r == 90000:            # at x == 10, r= 90000
+            length = 70
+            textstr = "10"
+            fontsize = 18
+        elif r == 190000:            # at x == 20, r= 190000
+            length = 70
+            textstr = "20"
+            fontsize = 18
+        elif r % 10000 == 0:         # at x = 2, 3, etc 
+            length = 60
+            textstr = str(round(x))
+            fontsize = 18
+            texty = ytop+80
+        elif r % 5000 == 0:         # at x = 1.5, 2.5, 3.5, etc However text only at x<10
+            length = 50
+            if r < 90000:           # only do text for x<10, r <90000  
+                textstr = str(x)
+                fontsize = 14
+                texty = ytop+65
+        elif r % 10000 == 0:         # at x = 11, 12, etc, r = 
+            length = 30
+            if r < 100000:           # only do text for x<20, r <100000  
+                textstr = str(x)
+                fontsize = 12
+                texty = ytop+85
+        elif r % 5000 == 0 and r < 200000:             # x < 30, r < 200000
+                length = 20                         # at x =10.5, 11.5, etc
+        elif r % 1000 == 0 and r<90000:         # at x = 1.1, 1.2, etc up to x<10, r<90000 
+            length = 30
+
+
+        if length:
+            vline = _vertical(length, xpos, ytop, col="black")
+            ET.SubElement(doc, 'line', vline)
+        if textstr:
+            if len(textstr) == 1:
+                textpos = xpos - 4    #  textpos This is in pixels
+            else:
+                textpos = xpos - 6    # three characters, such as 1.5
+            tel = ET.SubElement(doc, 'text', {"x":str(textpos), "y":str(texty),"fill":"black", "font-size":str(fontsize)})
+            tel.text = textstr
+
+    return doc
+

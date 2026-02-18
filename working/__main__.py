@@ -1,11 +1,8 @@
 
 import xml.etree.ElementTree as ET
 
-from . import make_rule
+from . import make_rule, addDscale, addCscale, addCFscale
 
-from . import addDscale
-
-from . import addCscale
 
 
 if __name__ == "__main__":
@@ -19,6 +16,9 @@ if __name__ == "__main__":
 
     # Add a cscale
     doc = addCscale(doc, rl)
+
+    # Add a cfscale
+    doc = addCFscale(doc, rl)
 
     tree = ET.ElementTree(doc)
     tree.write(filename, xml_declaration=True)
