@@ -28,7 +28,13 @@ class Rule:
     mainmove:float = 0.0
     slidermove:float = 0.0
 
+    hairline:float = 0.0
+
     def set_movement(self, xvalue, right):
+
+        if xvalue<1 or xvalue>10:
+            raise ValueError("Invalid x value, must be between 1 and 10")
+
 
         if xvalue == 1:
             move = 0
@@ -49,6 +55,20 @@ class Rule:
                 self.mainmove = self.scalewidth*math.log10(10.0/xvalue)   # This is the movement of a rule
 
 
+    def set_hairline(self, xvalue):
+
+        if xvalue<1 or xvalue>10:
+            raise ValueError("Invalid x value, must be between 1 and 10")
+        self.hairline = xvalue
+
+
+    @property
+    def hairlinepos(self):
+        if not self.hairline:
+            return self.mainmove
+        return self.mainmove + self.leftmargin + self.scalewidth*math.log10(self.hairline)
+
+
     @property
     def imagewidth(self):
         return self.mainmove + self.slidermove + self.leftmargin + self.scalewidth + self.rightmargin
@@ -63,16 +83,17 @@ class Rule:
 
 
 
-def make_rule(xvalue = 1, right = True):
-    """"xvalue is the x value to set the rule at
+def make_rule(xvalue = 1, right = True, hairline=0.0):
+    """"xvalue is the x value on the C scale to set the rule at
         right is True if setting the slider position to the right, in which the 1 goes above the x value 
-              or False if slider goes to the left, in which the 10 goes above the x value"""
-
-    if xvalue<1 or xvalue>10:
-        raise ValueError("Invalid x value, must be between 1 and 10")
+              or False if slider goes to the left, in which the 10 goes above the x value
+        hairline is zero if it is not to be shown, or a number between 1.0 and 10.0 in which case
+        the hairline cursor will be shown over that number on the C scale  """
 
     rl = Rule()
     rl.set_movement(xvalue, right)
+    if hairline:
+        rl.set_hairline(hairline)
     width = rl.rulewidth
 
     # Start the document
@@ -114,6 +135,15 @@ def make_rule(xvalue = 1, right = True):
     # top line
     ET.SubElement(doc, 'line', {"x1":str(rl.mainmove), "y1":str(heightofy), "x2":str(rl.mainmove+width), "y2":str(heightofy), "style":"stroke:black;stroke-width:1"})
 
+
+    # hairline
+    if hairline:
+        xh = rl.mainmove
+        ET.SubElement(doc, 'line', {"x1":str(rl.hairlinepos),
+                                    "y1":"0",
+                                    "x2":str(rl.hairlinepos),
+                                    "y2":str(rl.imageheight),
+                                    "style":"stroke:grey;stroke-width:1"})
 
     return doc, rl
 

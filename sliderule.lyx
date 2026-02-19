@@ -1156,6 +1156,118 @@ We can be confident that reading right along a scale from the leftmost 1 is addi
  which is the equivalent of multiplying or dividing by 10.
 \end_layout
 
+\begin_layout Subsection
+CF and DF
+\end_layout
+
+\begin_layout Standard
+Another twist to the tale of multiplication.
+ Depending on the model,
+ some sliderules have a selection of different scales on both sides which are often useful.
+\end_layout
+
+\begin_layout Standard
+Consider the multiplication of 
+\begin_inset Formula $12\times8$
+\end_inset
+
+,
+ or in other words 
+\begin_inset Formula $\log12+\log8$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename eighttwelve.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the 1 of the C scale has been set over 1.2 (12) of D,
+ and under the 8 of the C scale you can read the result on the D scale of 9.6 (or 96).
+ Nothing wrong with that,
+ unfortunately with a real sliderule that's where your thumb is!
+\end_layout
+
+\begin_layout Standard
+Physically you are holding the slide rule with a hand at either end,
+ and for numbers at the ends,
+ that can be slightly awkward.
+\end_layout
+
+\begin_layout Standard
+Most sliderules also have the scales CF and DF,
+ which are the same as C and D but 'Folded',
+ by the scales being offset by 
+\begin_inset Formula $x=\pi$
+\end_inset
+
+,
+ and which puts a 10 value more or less in the centre of the scale.
+ See below:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename withhairline.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case,
+ we have done the multiplication using the central sliding portion and the CF and DF scales.
+ CF does not have a 1,
+ but we know 10 does as good a job,
+ so we have set CF 10 against DF 8,
+ which in terms of distance is 
+\begin_inset Formula $\log8$
+\end_inset
+
+ along DF from the DF 1 which would be off to the left if it had one.
+ Then we want to add 
+\begin_inset Formula $\log12$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So go along CF to the 12,
+ which adds the 
+\begin_inset Formula $\log12,$
+\end_inset
+
+(give or take a factor of 10),
+ and then read the result on DF of 9.6 (96).
+ All conveniently done in the centre of the ruler.
+\end_layout
+
+\begin_layout Standard
+The DF scale has another use,
+ as its starting point of 
+\begin_inset Formula $\pi$
+\end_inset
+
+is directly over the D value of 1,
+ we can add log distances along the DF scale just by moving along the D scale.
+ Using the hairline slider over D6 we can view 
+\begin_inset Formula $6\times\pi=18.8$
+\end_inset
+
+ approx by reading it from the DF scale.
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem

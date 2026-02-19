@@ -7,9 +7,9 @@ from . import make_rule, addDscale, addCscale, addCFscale, addDFscale
 
 if __name__ == "__main__":
 
-    filename = "newtest.svg"
+    filename = "withhairline.svg"
 
-    doc, rl = make_rule(xvalue = 8, right = False)
+    doc, rl = make_rule(xvalue = 8, right = False, hairline=6)
 
     # Add a dscale
     doc = addDscale(doc, rl)
