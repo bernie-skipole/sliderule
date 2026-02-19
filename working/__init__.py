@@ -17,7 +17,7 @@ class Rule:
 
     scalewidth:int = 900
     topruleheight:int = 120
-    midruleheight:int = 240
+    midruleheight:int = 200
     btmruleheight:int = 120
 
     leftmargin:int = 50

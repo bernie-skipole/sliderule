@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     filename = "newtest.svg"
 
-    doc, rl = make_rule(xvalue = 2, right = True)
+    doc, rl = make_rule(xvalue = 1, right = True)
 
     # Add a dscale
     doc = addDscale(doc, rl)

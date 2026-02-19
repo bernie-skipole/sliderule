@@ -50,24 +50,21 @@ def addCFscale(doc, rl) -> ET.Element:
         length = 0
         textstr = ''
         fontsize = 16
-        texty = ytop+95
-        if r == 90000:            # at x == 10, r= 90000
+        texty = ytop+90
+        if r == 90000 or r == 190000 or r == 290000:            # at x == 10,20,30
             length = 70
-            textstr = "10"
-            fontsize = 18
-        elif r == 190000:            # at x == 20, r= 190000
-            length = 70
-            textstr = "20"
-            fontsize = 18
-        elif r == 290000:            # at x == 30, r= 290000
-            length = 70
-            textstr = "30"
+            textstr = str(round(x))
             fontsize = 18
         elif r % 10000 == 0 and r<90000:         # at x = 2, 3, etc up to x<10
             length = 60
             textstr = str(round(x))
             fontsize = 18
             texty = ytop+80
+        elif r == 140000 or r == 240000:                  # at x = 15, 25, r = 140000, 240000
+            length = 60
+            textstr = str(round(x))
+            fontsize = 14
+            texty = ytop+75
         elif r % 10000 == 0:         # at x = 11, 12, etc, and r must be greater than 90000, x>10
             length = 30
             if r < 190000:           # only do text for x<20, r <190000
