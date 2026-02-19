@@ -3,32 +3,32 @@ import xml.etree.ElementTree as ET
 import math
 
 
-def _vertical(length, xpos, ytop, col="black") -> dict:
+def _vertical(length, xpos, ybot, col="black") -> dict:
     """length is the length of the vertical line
-       ytop is the starting y position
+       ybot is the starting y position
        xpos is the x position
        col is the colour of the line"""
-    return {"x1":str(xpos), "y1":str(ytop), "x2":str(xpos), "y2":str(ytop+length), "style":f"stroke:{col};stroke-width:1"}
+    return {"x1":str(xpos), "y1":str(ybot), "x2":str(xpos), "y2":str(ybot-length), "style":f"stroke:{col};stroke-width:1"}
 
 
-def addCFscale(doc, rl) -> ET.Element:
-    "Adds the CF scale to the slider, returns the doc"
+def addDFscale(doc, rl) -> ET.Element:
+    "Adds the DF scale to the top rule, returns the doc"
 
-    ytop = rl.topruleheight # y value of top of scale
-    rightmove = rl.slidermove
+    ybot = rl.topruleheight # y value of bottom of the top scale
+    rightmove = rl.mainmove
 
-    # CF mark
-    CFmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ytop+40),"fill":"black", "font-size":"24"})
-    CFmark.text = "CF"
+    # DF mark
+    DFmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ybot-25),"fill":"black", "font-size":"24"})
+    DFmark.text = "DF"
 
     # Pi mark
     xpos = round(rightmove + rl.leftmargin)
-    Pimark = ET.SubElement(doc, 'text', {"x":str(xpos-4), "y":str(ytop+55),"fill":"black", "font-size":"16"})
+    Pimark = ET.SubElement(doc, 'text', {"x":str(xpos-4), "y":str(ybot-45),"fill":"black", "font-size":"16"})
     Pimark.text = "\u03C0"
-    ET.SubElement(doc, 'line', _vertical(40, xpos, ytop))
+    ET.SubElement(doc, 'line', _vertical(40, xpos, ybot))
 
     # pix mark
-    pixmark = ET.SubElement(doc, 'text', {"x":str(rightmove  + rl.leftmargin + rl.scalewidth + 12), "y":str(ytop+40),"fill":"black", "font-size":"16"})
+    pixmark = ET.SubElement(doc, 'text', {"x":str(rightmove  + rl.leftmargin + rl.scalewidth + 12), "y":str(ybot-30),"fill":"black", "font-size":"16"})
     pixmark.text = "\u03C0x"
 
     # start r
@@ -50,7 +50,7 @@ def addCFscale(doc, rl) -> ET.Element:
         length = 0
         textstr = ''
         fontsize = 16
-        texty = ytop+90
+        texty = ybot-76
         if r == 90000 or r == 190000 or r == 290000:            # at x == 10,20,30
             length = 70
             textstr = str(round(x))
@@ -59,24 +59,24 @@ def addCFscale(doc, rl) -> ET.Element:
             length = 60
             textstr = str(round(x))
             fontsize = 18
-            texty = ytop+80
+            texty = ybot-67
         elif r == 140000 or r == 240000:                  # at x = 15, 25, r = 140000, 240000
             length = 60
             textstr = str(round(x))
             fontsize = 14
-            texty = ytop+75
+            texty = ybot-65
         elif r % 10000 == 0:         # at x = 11, 12, etc, and r must be greater than 90000, x>10
             length = 30
             if r < 190000:           # only do text for x<20, r <190000
                 textstr = f"{x:.0f}"
                 fontsize = 12
-                texty = ytop+45
+                texty = ybot-35
         elif r % 5000 == 0:         # at x = 1.5, 2.5, 3.5, etc However text only at x<10
             if r < 90000:
                 length = 50         # text and long length x < 10, short length only at x>10
                 textstr = str(x)
                 fontsize = 14
-                texty = ytop+65
+                texty = ybot-55
             else:
                 length = 20           
         elif r % 5000 == 0 and r < 200000:             # x < 30, r < 200000
@@ -86,7 +86,7 @@ def addCFscale(doc, rl) -> ET.Element:
 
 
         if length:
-            vline = _vertical(length, xpos, ytop, col="black")
+            vline = _vertical(length, xpos, ybot, col="black")
             ET.SubElement(doc, 'line', vline)
         if textstr:
             if len(textstr) == 1:
