@@ -885,7 +885,7 @@ So to use a slide rule you also need to use the mark 1 brain to figure out where
 \end_layout
 
 \begin_layout Section
-Using the Slide rule
+Basic Slide rule usage
 \end_layout
 
 \begin_layout Subsection
@@ -1163,7 +1163,7 @@ CF and DF
 \begin_layout Standard
 Another twist to the tale of multiplication.
  Depending on the model,
- some sliderules have a selection of different scales on both sides which are often useful.
+ some slide rules have a selection of different scales on both sides which are often useful.
 \end_layout
 
 \begin_layout Standard
@@ -1190,8 +1190,22 @@ Consider the multiplication of
 \end_layout
 
 \begin_layout Standard
-So the 1 of the C scale has been set over 1.2 (12) of D,
- and under the 8 of the C scale you can read the result on the D scale of 9.6 (or 96).
+So the 1 of the C scale has been set over 1.2 of D,
+ (which is the distance 
+\begin_inset Formula $\log1.2$
+\end_inset
+
+ from D1) and then following along the C scale to the 8,
+ which is adding a further 
+\begin_inset Formula $\log8$
+\end_inset
+
+.
+ So the distance along D is now 
+\begin_inset Formula $\log1.2+\log8$
+\end_inset
+
+ and the product can be read on the D scale of 9.6 (or 96 using the mental calculation of the decimal point).
  Nothing wrong with that,
  unfortunately with a real sliderule that's where your thumb is!
 \end_layout
@@ -1228,7 +1242,7 @@ Most sliderules also have the scales CF and DF,
 In this case,
  we have done the multiplication using the central sliding portion and the CF and DF scales.
  CF does not have a 1,
- but we know 10 does as good a job,
+ but we know 10 does a reasonable job,
  so we have set CF 10 against DF 8,
  which in terms of distance is 
 \begin_inset Formula $\log8$
@@ -1239,17 +1253,32 @@ In this case,
 \begin_inset Formula $\log12$
 \end_inset
 
-.
+ along the CF scale.
+ However 
+\begin_inset Formula $\log12$
+\end_inset
+
+ is the distance from the 1 point,
+ so starting from the 10,
+ we go left (subtracting 
+\begin_inset Formula $\log10$
+\end_inset
+
+) then come back right to the 12 on CF.
+ In reality our eyeball just goes straight from the CF10 to the 12,
+ knowing that factors of ten get lost.
 \end_layout
 
 \begin_layout Standard
-So go along CF to the 12,
- which adds the 
-\begin_inset Formula $\log12,$
+So this is 
+\begin_inset Formula $\log8-\log10+\log12,$
 \end_inset
 
-(give or take a factor of 10),
- and then read the result on DF of 9.6 (96).
+and we can read the result of 
+\begin_inset Formula $\frac{8\times12}{10}$
+\end_inset
+
+ on DF of 9.6 (96).
  All conveniently done in the centre of the ruler.
 \end_layout
 
@@ -1260,12 +1289,280 @@ The DF scale has another use,
 \end_inset
 
 is directly over the D value of 1,
- we can add log distances along the DF scale just by moving along the D scale.
+ we can get multiples of 
+\begin_inset Formula $\pi$
+\end_inset
+
+ by adding log distances just by moving along the D scale from D1.
  Using the hairline slider over D6 we can view 
 \begin_inset Formula $6\times\pi=18.8$
 \end_inset
 
  approx by reading it from the DF scale.
+ (
+\begin_inset Formula $\log\pi+\log6$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+If you are reading this just to get a feel of how slide rules work you can probably stop now.
+ However there is a load of magic to come in getting powers and roots,
+ so if this sort of old elegance amuses you,
+ please read on.
+\end_layout
+
+\begin_layout Section
+Powers
+\end_layout
+
+\begin_layout Standard
+Going right back to the section describing logs,
+ we had the result:
+\begin_inset Formula 
+\[
+\log_{b}y^{n}=n\log_{b}y
+\]
+
+\end_inset
+
+I've used a variable
+\begin_inset Formula $y$
+\end_inset
+
+ here,
+ to avoid over-use of 
+\begin_inset Formula $x$
+\end_inset
+
+,
+ and,
+ taking logs of both sides:
+\begin_inset Formula 
+\[
+\log_{a}\log_{b}y^{n}=\log_{a}n+\log_{a}\log_{b}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our slide rule uses 
+\begin_inset Formula $\log_{10}$
+\end_inset
+
+ to multiply two numbers,
+ so this becomes:
+\begin_inset Formula 
+\[
+\log_{10}\log_{b}y^{n}=\log_{10}n+\log_{10}\log_{b}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On our slide rule,
+ scale C has 
+\begin_inset Formula $x$
+\end_inset
+
+ inscribed,
+ with 
+\begin_inset Formula $\log_{10}x$
+\end_inset
+
+ as the distance to the 
+\begin_inset Formula $x$
+\end_inset
+
+ value.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $x$
+\end_inset
+
+ itself was the logarithm (to base b) of another number 
+\begin_inset Formula $y$
+\end_inset
+
+,
+ then the distance along the slide rule would be 
+\begin_inset Formula $\log_{10}\log_{b}y$
+\end_inset
+
+ which is what we need,
+ and gives us a good chance of calculating 
+\begin_inset Formula $y^{n}$
+\end_inset
+
+.
+ So we want another scale,
+ with 
+\begin_inset Formula $y$
+\end_inset
+
+ inscribed,
+ mapping to the 
+\begin_inset Formula $x$
+\end_inset
+
+ values,
+ such that:
+\begin_inset Formula 
+\[
+x=\log_{b}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Or in other words a scale of:
+\begin_inset Formula 
+\[
+b^{x}
+\]
+
+\end_inset
+
+So there's a question of how to choose the base 
+\begin_inset Formula $b$
+\end_inset
+
+,
+ and there is also an elephant in the room;
+ up to now we have been pretty glib about powers of ten,
+ we can take them or leave them.
+ Alas no longer:
+\begin_inset Formula 
+\[
+2^{0.3}=1.2311...
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+2^{3}=8
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+2^{30}=1073741824
+\]
+
+\end_inset
+
+Both magnitudes and significant digits are all over the place.
+\end_layout
+
+\begin_layout Standard
+What we do know,
+ is that our C scale has 1.0 at the left end,
+ and 10.0 at the right.
+\end_layout
+
+\begin_layout Standard
+So the left value of our scale 
+\begin_inset Formula $b^{x}$
+\end_inset
+
+ will be 
+\begin_inset Formula $b$
+\end_inset
+
+ and the right hand will be 
+\begin_inset Formula $b^{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The base of 10 is not very good,
+ it does not have any numbers 1 to 9 on it,
+ and its maximum value of 
+\begin_inset Formula $10^{10}$
+\end_inset
+
+ is only of use to astronomers.
+\end_layout
+
+\begin_layout Standard
+A very common convention,
+ used on most models is to use e,
+ 2.71828...
+ as the base.
+ So the left hand value is 2.718..
+ and the right hand is 
+\begin_inset Formula $e^{10}$
+\end_inset
+
+ which is approximately 22026.46,
+ which covers a reasonably practical range of 
+\begin_inset Formula $y$
+\end_inset
+
+ values.
+\end_layout
+
+\begin_layout Standard
+This has the added facility of an immediate conversion using the hairline slider,
+ from 
+\begin_inset Formula $x$
+\end_inset
+
+ on the C scale to 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+on our new scale,
+ and also from the 
+\begin_inset Formula $y$
+\end_inset
+
+ value on our new scale to 
+\begin_inset Formula $\ln y$
+\end_inset
+
+ on the C scale.
+\end_layout
+
+\begin_layout Standard
+I'll give due warning;
+ we need more than one scale to handle the fact that powers of 10 are significant,
+ usually there are three for positive powers,
+ and three more for negative powers,
+ so that's six new scales!
+ For now we'll only consider the one scale of 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+for the range of 
+\begin_inset Formula $x$
+\end_inset
+
+ values on the C scale.
+ Here's an illustration,
+ getting 
+\begin_inset Formula $4^{3}$
+\end_inset
+
+which is 64:
 \end_layout
 
 \begin_layout Bibliography
