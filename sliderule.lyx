@@ -1368,7 +1368,7 @@ Our slide rule uses
 
 \begin_layout Standard
 On our slide rule,
- scale C has 
+ scale D has 
 \begin_inset Formula $x$
 \end_inset
 
@@ -1472,7 +1472,7 @@ Both magnitudes and significant digits are all over the place.
 
 \begin_layout Standard
 What we do know,
- is that our C scale has 1.0 at the left end,
+ is that our D scale has 1.0 at the left end,
  and 10.0 at the right.
 \end_layout
 
@@ -1494,7 +1494,7 @@ So the left value of our scale
 
 \begin_layout Standard
 The base of 10 is not very good,
- it does not have any numbers 1 to 9 on it,
+ it does not have any numbers 1 to 9 on it as it starts at 10,
  and its maximum value of 
 \begin_inset Formula $10^{10}$
 \end_inset
@@ -1526,7 +1526,7 @@ This has the added facility of an immediate conversion using the hairline slider
 \begin_inset Formula $x$
 \end_inset
 
- on the C scale to 
+ on the D scale to 
 \begin_inset Formula $e^{x}$
 \end_inset
 
@@ -1539,16 +1539,34 @@ on our new scale,
 \begin_inset Formula $\ln y$
 \end_inset
 
- on the C scale.
+ on the D scale.
 \end_layout
 
 \begin_layout Standard
 I'll give due warning;
  we need more than one scale to handle the fact that powers of 10 are significant,
- usually there are three for positive powers,
- and three more for negative powers,
+ usually there are three for 
+\begin_inset Formula $y$
+\end_inset
+
+ values greater than 1,
+ and three more for 
+\begin_inset Formula $y$
+\end_inset
+
+ values less than 1,
  so that's six new scales!
- For now we'll only consider the one scale of 
+ At 
+\begin_inset Formula $y=1$
+\end_inset
+
+ all powers of y are irrelevant as 1 to any power is just 1.
+ So these multiple scales can get very close to 1,
+ but do not actually get there.
+\end_layout
+
+\begin_layout Standard
+For now we'll only consider the one scale of 
 \begin_inset Formula $e^{x}$
 \end_inset
 
@@ -1556,7 +1574,7 @@ for the range of
 \begin_inset Formula $x$
 \end_inset
 
- values on the C scale.
+ values on the D scale.
  Here's an illustration,
  getting 
 \begin_inset Formula $4^{3}$
