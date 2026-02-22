@@ -8,6 +8,8 @@ def _vertical(length, xpos, ytop, col="black") -> dict:
        ytop is the starting y position
        xpos is the x position
        col is the colour of the line"""
+    # get xpos to the nearest .25
+    xpos = round(xpos*4)/4.0
     return {"x1":str(xpos), "y1":str(ytop), "x2":str(xpos), "y2":str(ytop+length), "style":f"stroke:{col};stroke-width:1"}
 
 
@@ -22,7 +24,8 @@ def addCFscale(doc, rl) -> ET.Element:
     CFmark.text = "CF"
 
     # Pi mark
-    xpos = round(rightmove + rl.leftmargin)
+    xpos = rightmove + rl.leftmargin
+    xpos = round(xpos*4)/4.0
     Pimark = ET.SubElement(doc, 'text', {"x":str(xpos-4), "y":str(ytop+55),"fill":"black", "font-size":"16"})
     Pimark.text = "\u03C0"
     ET.SubElement(doc, 'line', _vertical(40, xpos, ytop))
@@ -46,7 +49,7 @@ def addCFscale(doc, rl) -> ET.Element:
         # x is 1 to 10 inclusive
         x = 1 + r/10000
         # move to the left by log pi
-        xpos = round(rightmove + rl.leftmargin + rl.scalewidth*math.log10(x) - rl.scalewidth*math.log10(math.pi))
+        xpos = rightmove + rl.leftmargin + rl.scalewidth*math.log10(x) - rl.scalewidth*math.log10(math.pi)
         length = 0
         textstr = ''
         fontsize = 16
@@ -90,9 +93,9 @@ def addCFscale(doc, rl) -> ET.Element:
             ET.SubElement(doc, 'line', vline)
         if textstr:
             if len(textstr) == 1:
-                textpos = xpos - 4    #  textpos This is in pixels
+                textpos = round(xpos - 4)    #  textpos This is in pixels
             else:
-                textpos = xpos - 6    # three characters, such as 1.5
+                textpos = round(xpos - 6)    # three characters, such as 1.5
             tel = ET.SubElement(doc, 'text', {"x":str(textpos), "y":str(texty),"fill":"black", "font-size":str(fontsize)})
             tel.text = textstr
 
