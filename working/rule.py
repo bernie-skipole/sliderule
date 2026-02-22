@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 
 import math
 
-from dataclasses import dataclass
+
 
 from .dscale import addDscale
 
@@ -15,25 +15,31 @@ from .dfscale import addDFscale
 from .ll3scale import addLL3scale
 
 
-@dataclass
+
 class Rule:
     "Defines a rule dimensions"
 
-    topruleheight:int = 120
-    midruleheight:int = 200
-    btmruleheight:int = 120
 
-    leftmargin:int = 50
-    rightmargin:int = 50
+    def __init__(self, xvalue:float = 1.0, right:bool = True, hairline:float=0.0,
+                       topruleheight:int = 120,
+                       midruleheight:int = 200,
+                       btmruleheight:int = 120):
+        """"xvalue is the x value on the C scale to set the rule at
+            right is True if setting the slider position to the right, in which the 1 goes above the x value 
+                  or False if slider goes to the left, in which the 10 goes above the x value
+            hairline is zero if it is not to be shown, or a number between 1.0 and 10.0 in which case
+            the hairline cursor will be shown over that number on the C scale  """
 
-    mainmove:float = 0.0
-    slidermove:float = 0.0
+        self.topruleheight = topruleheight
+        self.midruleheight = midruleheight
+        self.btmruleheight = btmruleheight
 
-    hairline:float = 0.0
+        self.scalewidth = 900
+        self.leftmargin = 50
+        self.rightmargin = 50
 
-    scalewidth:int = 900
-
-    def set_movement(self, xvalue, right):
+        self.mainmove = 0.0
+        self.slidermove = 0.0
 
         if xvalue<1 or xvalue>10:
             raise ValueError("Invalid x value, must be between 1 and 10")
@@ -57,12 +63,69 @@ class Rule:
             else:
                 self.mainmove = self.scalewidth*math.log10(10.0/xvalue)   # This is the movement of a rule
 
+        if hairline:
+            if hairline<1 or hairline>10:
+                raise ValueError("Invalid hairline value, should be either zero or a number between 1 and 10")
+            self.hairline = hairline
+        else:
+            self.hairline = 0.0
 
-    def set_hairline(self, xvalue):
+        width = self.rulewidth
 
-        if xvalue<1 or xvalue>10:
-            raise ValueError("Invalid x value, must be between 1 and 10")
-        self.hairline = xvalue
+        # Start the document
+        self._doc = ET.Element('svg', width=str(self.imagewidth), height=str(self.imageheight), version='1.1', xmlns='http://www.w3.org/2000/svg')
+        textstyle = ET.SubElement(self._doc, 'style')
+        textstyle.text = """text {
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: Thin;
+          }
+    """
+        # top rule
+
+        if topruleheight:
+            ### rectangle of background colour
+            ET.SubElement(self._doc, 'rect', {"width":str(width), "height":str(self.topruleheight), "x":str(self.mainmove),"y":"0", "fill":"#f9fc69"})
+
+            # bottom line
+            ET.SubElement(self._doc, 'line', {"x1":str(self.mainmove), "y1":str(self.topruleheight), "x2":str(self.mainmove+width), "y2":str(self.topruleheight), "style":"stroke:black;stroke-width:1"})
+
+
+        # slider
+
+        ### rectangle of background colour
+        ET.SubElement(self._doc, 'rect', {"width":str(width), "height":str(self.midruleheight), "x":str(self.slidermove),"y":str(self.topruleheight), "fill":"#f9fc69"})
+
+        # top line
+        ET.SubElement(self._doc, 'line', {"x1":str(self.slidermove), "y1":str(self.topruleheight), "x2":str(self.slidermove+width), "y2":str(self.topruleheight), "style":"stroke:black;stroke-width:1"})
+
+        # bottom line
+        ET.SubElement(self._doc, 'line', {"x1":str(self.slidermove), "y1":str(self.topruleheight+self.midruleheight), "x2":str(self.slidermove+width), "y2":str(self.topruleheight+self.midruleheight), "style":"stroke:black;stroke-width:1"})
+
+
+        # bottom rule
+
+        heightofy = self.topruleheight + self.midruleheight
+
+        ### rectangle of background colour
+        ET.SubElement(self._doc, 'rect', {"width":str(width), "height":str(self.btmruleheight), "x":str(self.mainmove),"y":str(heightofy), "fill":"#f9fc69"})
+
+        # top line
+        ET.SubElement(self._doc, 'line', {"x1":str(self.mainmove), "y1":str(heightofy), "x2":str(self.mainmove+width), "y2":str(heightofy), "style":"stroke:black;stroke-width:1"})
+
+
+        # hairline
+        if hairline:
+            xh = self.mainmove
+            ET.SubElement(self._doc, 'line', {"x1":str(self.hairlinepos),
+                                        "y1":"0",
+                                        "x2":str(self.hairlinepos),
+                                        "y2":str(self.imageheight),
+                                        "style":"stroke:grey;stroke-width:1"})
+
+
+        return
+
+
 
 
     @property
@@ -105,75 +168,6 @@ class Rule:
 
 
 
-def make_rule(xvalue:float = 1.0, right:bool = True, hairline:float=0.0,
-             topruleheight:int = 120,
-             midruleheight:int = 200,
-             btmruleheight:int = 120):
-    """"xvalue is the x value on the C scale to set the rule at
-        right is True if setting the slider position to the right, in which the 1 goes above the x value 
-              or False if slider goes to the left, in which the 10 goes above the x value
-        hairline is zero if it is not to be shown, or a number between 1.0 and 10.0 in which case
-        the hairline cursor will be shown over that number on the C scale  """
-
-    rl = Rule(topruleheight, midruleheight, btmruleheight)
-    rl.set_movement(xvalue, right)
-    if hairline:
-        rl.set_hairline(hairline)
-    width = rl.rulewidth
-
-    # Start the document
-    doc = ET.Element('svg', width=str(rl.imagewidth), height=str(rl.imageheight), version='1.1', xmlns='http://www.w3.org/2000/svg')
-    textstyle = ET.SubElement(doc, 'style')
-    textstyle.text = """text {
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: Thin;
-      }
-"""
-    # top rule
-
-    if topruleheight:
-        ### rectangle of background colour
-        ET.SubElement(doc, 'rect', {"width":str(width), "height":str(rl.topruleheight), "x":str(rl.mainmove),"y":"0", "fill":"#f9fc69"})
-
-        # bottom line
-        ET.SubElement(doc, 'line', {"x1":str(rl.mainmove), "y1":str(rl.topruleheight), "x2":str(rl.mainmove+width), "y2":str(rl.topruleheight), "style":"stroke:black;stroke-width:1"})
-
-
-    # slider
-
-    ### rectangle of background colour
-    ET.SubElement(doc, 'rect', {"width":str(width), "height":str(rl.midruleheight), "x":str(rl.slidermove),"y":str(rl.topruleheight), "fill":"#f9fc69"})
-
-    # top line
-    ET.SubElement(doc, 'line', {"x1":str(rl.slidermove), "y1":str(rl.topruleheight), "x2":str(rl.slidermove+width), "y2":str(rl.topruleheight), "style":"stroke:black;stroke-width:1"})
-
-    # bottom line
-    ET.SubElement(doc, 'line', {"x1":str(rl.slidermove), "y1":str(rl.topruleheight+rl.midruleheight), "x2":str(rl.slidermove+width), "y2":str(rl.topruleheight+rl.midruleheight), "style":"stroke:black;stroke-width:1"})
-
-
-    # bottom rule
-
-    heightofy = rl.topruleheight + rl.midruleheight
-
-    ### rectangle of background colour
-    ET.SubElement(doc, 'rect', {"width":str(width), "height":str(rl.btmruleheight), "x":str(rl.mainmove),"y":str(heightofy), "fill":"#f9fc69"})
-
-    # top line
-    ET.SubElement(doc, 'line', {"x1":str(rl.mainmove), "y1":str(heightofy), "x2":str(rl.mainmove+width), "y2":str(heightofy), "style":"stroke:black;stroke-width:1"})
-
-
-    # hairline
-    if hairline:
-        xh = rl.mainmove
-        ET.SubElement(doc, 'line', {"x1":str(rl.hairlinepos),
-                                    "y1":"0",
-                                    "x2":str(rl.hairlinepos),
-                                    "y2":str(rl.imageheight),
-                                    "style":"stroke:grey;stroke-width:1"})
-
-    rl._doc = doc
-
-    return rl
 
 
 

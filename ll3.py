@@ -1,23 +1,23 @@
 
-from working import make_rule
+from working import Rule
 
 
 
 if __name__ == "__main__":
 
 
-    rl = make_rule(xvalue = 8, right = False, hairline=6,
+    rl = Rule(xvalue = 8, right = False, hairline=6,
                    topruleheight = 0,
                    midruleheight = 120,
                    btmruleheight = 240)
 
-    # Add a dscale
+    # Add a D scale
     rl.addDscale()
 
-    # Add a cscale
+    # Add a C scale
     rl.addCscale()
 
-    # Add a cscale
+    # Add a LL3 scale
     rl.addLL3scale()
 
     filename = "ll3.svg"

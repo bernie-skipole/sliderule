@@ -1,1 +1,1 @@
-from .rule import make_rule
+from .rule import Rule

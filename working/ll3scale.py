@@ -8,7 +8,20 @@ def _vertical(length, xpos, ybot, col="black") -> dict:
        ybot is the ending y position
        xpos is the x position
        col is the colour of the line"""
+    # get xpos to the nearest .25
+    xpos = round(xpos*4)/4.0
     return {"x1":str(xpos), "y1":str(ybot), "x2":str(xpos), "y2":str(ybot-length), "style":f"stroke:{col};stroke-width:1"}
+
+
+def _text(doc, textstr, xpos, texty, fontsize):
+    if textstr:
+        if len(textstr) == 1:
+            textpos = round(xpos - 4)    #  textpos This is in pixels
+        else:
+            textpos = round(xpos - 6)    # three characters, such as 1.5
+        
+        tel = ET.SubElement(doc, 'text', {"x":str(textpos), "y":str(texty),"fill":"black", "font-size":str(fontsize)})
+        tel.text = textstr
 
 
 
@@ -30,55 +43,46 @@ def addLL3scale(doc, rl) -> ET.Element:
     emark.text = "e"
     exmark = ET.SubElement(doc, 'text', {"x":str(rightmove  + rl.leftmargin + rl.scalewidth + 22), "y":str(ybot-44),"fill":"black", "font-size":"12"})
     exmark.text = "x"
-    return doc
 
-    for r in range(0, 90000+1):
-        # r is 0 to 90000   - this is along rule length
-        x = 1 + r/10000
-        x = math.exp(x)
-        ypos = round(rightmove + rl.leftmargin + rl.scalewidth*math.log10(math.log(x)))
-        length = 0
+
+    m = rl.scalewidth/math.log10(math.log(10))
+
+    # start at x = e
+    xpos = rightmove + rl.leftmargin
+    length = 30
+    textstr = "e"
+    fontsize = 18
+    texty = ybot-40
+
+    vline = _vertical(length, xpos, ybot, col="black")
+    ET.SubElement(doc, 'line', vline)
+
+    _text(doc, textstr, xpos, texty, fontsize)
+
+    # x from 2.72 to 2.99 in steps of 0.1
+    for r in range(272, 300):
+        x = r/100.0
+        xpos = rightmove + rl.leftmargin + m*math.log10(math.log(x))
         textstr = ''
-        fontsize = 16
-        texty = ybot-80
-        if not r:                   # at x == 1, r = 0
-            length = 70
-            textstr = "1"
-            fontsize = 18
-        elif r == 90000:            # at x == 10, r= 90000
-            length = 70
-            textstr = "10"
-            fontsize = 18
-        elif r % 10000 == 0:         # at x = 2, 3, etc 
-            length = 60
-            textstr = str(round(x))
-            fontsize = 18
-            texty = ybot-66
-        elif r % 5000 == 0:         # at x = 1.5, 2.5, 3.5, etc 
-            length = 50
+        length = 0
+        if r % 10 == 0:
+            length = 20
             textstr = str(x)
-            fontsize = 14
-            texty = ybot-55
-        elif r % 1000 == 0:         # at x = 1.1, 1.2, etc 
-            length = 30
-            if r < 10000:           # only do text for x<2, r <10000  
-                textstr = str(x)
-                fontsize = 12
-                texty = ybot-33
-        elif r < 20000:             # x < 3, r < 20000
-            if r % 500 == 0:        # at x =1.05, 1.15, etc
-                length = 20
+            fontsize = 16
+            texty = ybot-30
+        elif r % 5 == 0:
+            length = 15
+        else:
+            length = 10
+
 
         if length:
             vline = _vertical(length, xpos, ybot, col="black")
             ET.SubElement(doc, 'line', vline)
+
         if textstr:
-            if len(textstr) == 1:
-                textpos = xpos - 4    #  textpos This is in pixels
-            else:
-                textpos = xpos - 6    # three characters, such as 1.5
-            tel = ET.SubElement(doc, 'text', {"x":str(textpos), "y":str(texty),"fill":"black", "font-size":str(fontsize)})
-            tel.text = textstr
+            _text(doc, textstr, xpos, texty, fontsize)
+
 
     return doc
 
