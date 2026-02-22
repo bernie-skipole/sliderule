@@ -169,20 +169,8 @@ In this case
 \begin_inset Formula $b$
 \end_inset
 
- is called the base of the log,
+ is called the base of the log.
 \begin_inset Newline newline
-\end_inset
-
-and putting 
-\begin_inset Formula $x=b^{y}$
-\end_inset
-
- into that first equation:
-\begin_inset Formula 
-\[
-y=\log_{b}b^{y}
-\]
-
 \end_inset
 
 So an example:
@@ -262,6 +250,22 @@ The heart of the matter
 \end_layout
 
 \begin_layout Standard
+Given
+\begin_inset Formula $y=\log_{b}x$
+\end_inset
+
+ and 
+\begin_inset Formula $x=b^{y}$
+\end_inset
+
+ we have an identity we are going to use later:
+\begin_inset Formula 
+\[
+y=\log_{b}b^{y}
+\]
+
+\end_inset
+
 Here's the magic,
  take two numbers 
 \begin_inset Formula $c=b^{p}$
@@ -280,7 +284,7 @@ p=\log_{b}c
 
 \end_inset
 
-and
+
 \begin_inset Formula 
 \[
 q=\log_{b}d
@@ -340,15 +344,7 @@ Taking the log of both sides,
 
 \begin_inset Formula 
 \[
-\log_{b}b^{p}b^{q}=\log_{b}b^{p+q}=p+q
-\]
-
-\end_inset
-
-therefore
-\begin_inset Formula 
-\[
-\log_{b}cd=p+q
+\log_{b}cd=\log b^{p}b^{q}=\log_{b}b^{p+q}=p+q
 \]
 
 \end_inset
@@ -397,7 +393,8 @@ So how do we get logs and antilogs?
 \end_layout
 
 \begin_layout Standard
-As a school child everyone over a certain age had a booklet of 'Logarithmic Tables' which also included anti-log and trigonometric 'four-figure' tables.
+As a school child,
+ everyone over a certain age had a booklet of 'Logarithmic Tables' which also included anti-log and trigonometric 'four-figure' tables.
  Ask your granddad.
  
 \end_layout
