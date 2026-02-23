@@ -45,37 +45,65 @@ def addLL3scale(doc, rl) -> ET.Element:
     exmark.text = "x"
 
 
-    m = rl.scalewidth/math.log10(math.log(10))
+    # scaling with y = mx+c
+    m = rl.scalewidth
     c = rightmove + rl.leftmargin
 
     # start at x = e
     xpos = c
-    length = 30
+    length = 35
     textstr = "e"
     fontsize = 18
     texty = ybot-40
     _vertical(doc, length, xpos, ybot, col="black")
     _text(doc, textstr, xpos, texty, fontsize)
 
-    # x from 2.72 to 2.99 in steps of 0.1
-    for r in range(272, 300):
-        x = r/100.0
-        xpos = m*math.log10(math.log(x)) + c
+    # x from 2.75 to 4.0 in steps of 0.05
+    for r in range(275, 400, 5):
         textstr = ''
         length = 0
-        if r % 10 == 0:
-            length = 20
+        x = r/100.0
+        xpos = m*math.log10(math.log(x)) + c
+        if r % 100 == 0:
+            length = 35
+            textstr = "3"
+            fontsize = 16
+            texty = ybot-40
+        elif r % 50 == 0:
+            length = 25
             textstr = str(x)
             fontsize = 16
             texty = ybot-30
-        elif r % 5 == 0:
-            length = 15
+        elif r % 10 == 0:
+            length = 20
         else:
-            length = 10
+            length = 14
         if length:
             vline = _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, xpos, texty, fontsize)
+    # x from 4.0 to 10.0 in steps of 0.1
+    for r in range(400, 1000):
+        textstr = ''
+        length = 0
+        x = r/100.0
+        xpos = m*math.log10(math.log(x)) + c
+        if r % 100 == 0:
+            length = 35
+            textstr = str(int(x))
+            fontsize = 16
+            texty = ybot-40
+        elif r % 50 == 0:
+            length = 25
+        elif r % 25 == 0 and r > 700:
+            length = 20
+        elif r % 10 == 0 and r < 700:
+            length = 14
+        if length:
+            vline = _vertical(doc, length, xpos, ybot, col="black")
+        if textstr:
+            _text(doc, textstr, xpos, texty, fontsize)
+
 
 
     return doc
