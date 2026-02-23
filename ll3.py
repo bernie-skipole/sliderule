@@ -1,12 +1,13 @@
 
-from working import Rule
+import math
 
+from working import Rule
 
 
 if __name__ == "__main__":
 
 
-    rl = Rule(xvalue = 8, right = False, hairline=6,
+    rl = Rule(xvalue = math.log(4), right = True, hairline=math.log(64),
                    topruleheight = 0,
                    midruleheight = 120,
                    btmruleheight = 180)

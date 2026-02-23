@@ -479,7 +479,7 @@ We've reduced finding a power to a multiplication!
 \end_inset
 
 ,
- but that's a powerful technique.
+ and that's a powerful technique.
  As n can be fractional,
  this includes roots as well.
 \end_layout
@@ -493,7 +493,7 @@ And if we really want to push the boat out,
  times multiplication with logs:
 \begin_inset Formula 
 \[
-\log_{a}\log_{b}x^{n}=\log_{a}n+\log_{a}\log_{b}x
+\log_{a}(\log_{b}x^{n})=\log_{a}(n\log_{b}x)=\log_{a}n+\log_{a}(\log_{b}x)
 \]
 
 \end_inset
@@ -1338,7 +1338,7 @@ I've used a variable
  taking logs of both sides:
 \begin_inset Formula 
 \[
-\log_{a}\log_{b}y^{n}=\log_{a}n+\log_{a}\log_{b}y
+\log_{a}(\log_{b}y^{n})=\log_{a}(n\log_{b}y)=\log_{a}n+\log_{a}(\log_{b}y)
 \]
 
 \end_inset
@@ -1355,7 +1355,7 @@ Our slide rule uses
  so this becomes:
 \begin_inset Formula 
 \[
-\log_{10}\log_{b}y^{n}=\log_{10}n+\log_{10}\log_{b}y
+\log_{10}(\log_{b}y^{n})=\log_{10}n+\log_{10}(\log_{b}y)
 \]
 
 \end_inset
@@ -1392,7 +1392,7 @@ If
 
 ,
  then the distance along the slide rule would be 
-\begin_inset Formula $\log_{10}\log_{b}y$
+\begin_inset Formula $\log_{10}(\log_{b}y)$
 \end_inset
 
  which is what we need,
@@ -1567,7 +1567,7 @@ For now we'll only consider the one scale of
 \begin_inset Formula $e^{x}$
 \end_inset
 
-for the range of 
+ for the range of 
 \begin_inset Formula $x$
 \end_inset
 
@@ -1578,6 +1578,22 @@ for the range of
 \end_inset
 
 which is 64:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ll3.svg
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 1 of scale C is placed over the 4 of scale LL (using the hairline),
+ then the hairline is moved to C3 and the result,
+ 64 is read on the LL scale.
 \end_layout
 
 \begin_layout Bibliography
