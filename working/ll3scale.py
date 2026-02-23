@@ -29,7 +29,7 @@ def _text(doc, textstr, xpos, texty, fontsize):
 def addLL3scale(doc, rl) -> ET.Element:
     "Adds the LL3 scale to the bottom rule, returns the doc"
 
-    ybot = rl.topruleheight + rl.midruleheight + 200 # y value of bot of scale
+    ybot = rl.topruleheight + rl.midruleheight + 170 # y value of bot of scale
     rightmove = rl.mainmove
 
     # LL3 mark
@@ -103,6 +103,119 @@ def addLL3scale(doc, rl) -> ET.Element:
             vline = _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, xpos, texty, fontsize)
+    # x from 10.0 to 100.0 in steps of 1
+    for r in range(10, 100):
+        textstr = ''
+        length = 0
+        x = float(r)
+        xpos = m*math.log10(math.log(x)) + c
+        if r % 10 == 0:
+            if r <= 50:
+                length = 35
+                textstr = str(int(x))
+                fontsize = 16
+                texty = ybot-40
+            else:
+                length = 25
+        elif r % 5 == 0:
+            if r <= 50:
+                length = 25
+            else:
+                length = 20
+            if r == 15:
+                textstr = "15"
+                fontsize = 16
+                texty = ybot-30
+        elif r < 40:
+            length = 14
+        if length:
+            vline = _vertical(doc, length, xpos, ybot, col="black")
+        if textstr:
+            _text(doc, textstr, xpos, texty, fontsize)
+
+    # x from 100 to 1000 in steps of 10
+    for r in range(100, 1000, 10):
+        textstr = ''
+        length = 0
+        x = float(r)
+        xpos = m*math.log10(math.log(x)) + c
+        if r % 100 == 0:
+            if r in (100, 200, 500):
+                length = 35
+                textstr = str(r)
+                fontsize = 16
+                texty = ybot-40
+                textpos = xpos-10
+            else:
+                length = 25
+        elif r % 50 == 0:
+            length = 20
+        elif r < 200:
+            length = 14
+
+        if length:
+            vline = _vertical(doc, length, xpos, ybot, col="black")
+        if textstr:
+            _text(doc, textstr, textpos, texty, fontsize)
+
+    # x from 1000 to 5000 in steps of 100
+    for r in range(1000, 5000, 100):
+        textstr = ''
+        length = 0
+        x = float(r)
+        xpos = m*math.log10(math.log(x)) + c
+        if r % 1000 == 0:
+            if r in (1000, 2000, 3000):
+                length = 35
+                fontsize = 16
+                texty = ybot-40
+                textpos = xpos
+                if r == 1000:
+                    textstr = '1k'
+                elif r == 2000:
+                    textstr = '2k'
+                else:
+                    textstr = '3k'
+            else:
+                length = 25
+        elif r % 500 == 0:
+            length = 20
+        elif r < 2000:
+            length = 14
+
+        if length:
+            vline = _vertical(doc, length, xpos, ybot, col="black")
+        if textstr:
+            _text(doc, textstr, textpos, texty, fontsize)
+
+    # x from 5000 to 20000 in steps of 1000
+    for r in range(5000, 20001, 1000):
+        textstr = ''
+        length = 0
+        x = float(r)
+        xpos = m*math.log10(math.log(x)) + c
+        if r % 5000 == 0:
+            if r == 15000:
+                length = 20
+            elif r in (5000, 10000, 20000):
+                length = 35
+                fontsize = 16
+                texty = ybot-40
+                if r == 5000:
+                    textpos = xpos
+                else:
+                    textpos = xpos-10
+                textstr = f'{int(r/1000)}k'
+        else:
+            length = 14
+        if length:
+            vline = _vertical(doc, length, xpos, ybot, col="black")
+        if textstr:
+            _text(doc, textstr, textpos, texty, fontsize)
+
+
+
+
 
 
 

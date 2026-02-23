@@ -9,7 +9,7 @@ if __name__ == "__main__":
     rl = Rule(xvalue = 8, right = False, hairline=6,
                    topruleheight = 0,
                    midruleheight = 120,
-                   btmruleheight = 240)
+                   btmruleheight = 180)
 
     # Add a D scale
     rl.addDscale()
