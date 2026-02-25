@@ -14,6 +14,8 @@ from .dfscale import addDFscale
 
 from .ll3scale import addLL3scale
 
+from .ll2scale import addLL2scale
+
 
 
 class Rule:
@@ -165,6 +167,10 @@ class Rule:
 
     def addLL3scale(self):
         self._doc = addLL3scale(self._doc, self)
+
+    def addLL2scale(self):
+        self._doc = addLL2scale(self._doc, self)
+
 
 
 
