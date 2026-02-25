@@ -1591,9 +1591,202 @@ which is 64:
 \end_layout
 
 \begin_layout Standard
-The 1 of scale C is placed over the 4 of scale LL (using the hairline),
+The 1 of scale C is placed over the 4 of scale LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ (using the hairline),
  then the hairline is moved to C3 and the result,
- 64 is read on the LL scale.
+ 64 is read on the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ scale.
+\end_layout
+
+\begin_layout Standard
+The breakdown of what is happening:
+\end_layout
+
+\begin_layout Standard
+4 of the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ scale maps directly to 
+\begin_inset Formula $\log_{e}4$
+\end_inset
+
+ which is 1.386...
+ on D,
+ then using the C scale to multiply by 3,
+ as we have done before,
+ gives us 4.16..
+ on D,
+ and this is 
+\begin_inset Formula $\log_{e}64$
+\end_inset
+
+ so we can read 64 directly on the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ scale.
+\end_layout
+
+\begin_layout Standard
+You can also see,
+ just by eye,
+ that the 2 on the C scale lines up with 16 on LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+,
+ showing 
+\begin_inset Formula $4^{2}$
+\end_inset
+
+ is sixteen.
+\end_layout
+
+\begin_layout Standard
+The alignment above also shows how roots are taken,
+ the C3 above LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+64 is a division,
+ which is used to calculate 
+\begin_inset Formula $16^{\frac{1}{3}}$
+\end_inset
+
+and moving to C1 gets the cubed root on the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ scale which is 4.
+\end_layout
+
+\begin_layout Standard
+However if we are interested in results which gives us much larger numbers we are running out of luck,
+ the biggest number shown above is 20000,
+ and the resolution of the scale at that end is fairly poor.
+\end_layout
+
+\begin_layout Standard
+You will also see that the starting value of 
+\begin_inset Formula $e$
+\end_inset
+
+ on LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ does not allow powers of smaller numbers,
+ and for example taking the square root of 6,
+ which is 2.45..
+ is problematic,
+ moving C2 over LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+6 leaves C1 hanging out on the left.
+\end_layout
+
+\begin_layout Standard
+The answer is to add another scale,
+ which is the equivalent of the scale to the left of LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Remembering that D is from 1 to 10,
+ and if there was a scale to the left of D,
+ it would be the equivalent of 0.1 to 1.
+\end_layout
+
+\begin_layout Standard
+Therefore the left-of-LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ is 
+\begin_inset Formula $e^{0.1}$
+\end_inset
+
+ to 
+\begin_inset Formula $e$
+\end_inset
+
+ and is usually labeled LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+,
+ here's an illustration:
 \end_layout
 
 \begin_layout Bibliography
