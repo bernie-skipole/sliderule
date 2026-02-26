@@ -47,7 +47,13 @@ def addLL2scale(doc, rl) -> ET.Element:
 
     # scaling with y = mx+c
     m = rl.scalewidth
-    c = rightmove + rl.leftmargin + rl.scalewidth  # 
+    c = rightmove + rl.leftmargin + rl.scalewidth
+
+    xpos = m*math.log10(math.log(1.11)) + c
+    textstr = "1.11"
+    fontsize = 14
+    texty = ybot-30
+    _text(doc, textstr, xpos, texty, fontsize)
 
     # x from 1.105 to 1.2 in steps of 0.005
     for r in range(1105, 2000):
@@ -59,12 +65,13 @@ def addLL2scale(doc, rl) -> ET.Element:
             length = 45
             textstr = str(x)
             fontsize = 16
-            texty = ybot-40
+            texty = ybot-50
         elif r % 50 == 0:
             length = 35
-            textstr = str(x)
-            fontsize = 16
-            texty = ybot-30
+            if r < 1500:
+                textstr = str(x)
+                fontsize = 14
+                texty = ybot-40
         elif r % 10 == 0:
             length = 25
         elif r % 5 == 0 and r<1300:
