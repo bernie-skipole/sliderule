@@ -55,7 +55,16 @@ def addLL2scale(doc, rl) -> ET.Element:
     texty = ybot-30
     _text(doc, textstr, xpos, texty, fontsize)
 
-    # x from 1.105 to 1.2 in steps of 0.005
+    xpos = c
+    textstr = "e"
+    fontsize = 14
+    texty = ybot-55
+    _text(doc, textstr, xpos, texty, fontsize)
+    length = 40
+    _vertical(doc, length, xpos, ybot, col="black")
+
+
+    # x from 1.105 to 2.0 in steps of 0.001
     for r in range(1105, 2000):
         textstr = ''
         length = 0
@@ -79,9 +88,29 @@ def addLL2scale(doc, rl) -> ET.Element:
         elif r < 1140:
             length = 15
         if length:
-            vline = _vertical(doc, length, xpos, ybot, col="black")
+            _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, xpos, texty, fontsize)
+
+    # x from 2 to 2.7 in steps of 0.01
+    for r in range(200, 271):
+        textstr = ''
+        length = 0
+        x = r/100.0
+        xpos = m*math.log10(math.log(x)) + c
+        if r % 10 == 0:
+            length = 45
+            if r < 240 or r==250:
+                textstr = str(x)
+                fontsize = 12
+                texty = ybot-50
+        elif r % 5 == 0:
+            length = 35
+        if length:
+            _vertical(doc, length, xpos, ybot, col="black")
+        if textstr:
+            _text(doc, textstr, xpos, texty, fontsize)
+
 
 
     return doc
