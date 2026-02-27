@@ -1755,7 +1755,8 @@ The answer is to add another scale,
 \begin_layout Standard
 Remembering that D is from 1 to 10,
  and if there was a scale to the left of D,
- it would be the equivalent of 0.1 to 1.
+ it would be from 0.1 to 1.
+ (Those powers of 10!)
 \end_layout
 
 \begin_layout Standard
@@ -1772,11 +1773,11 @@ Therefore the left-of-LL
 \begin_inset Formula $e^{0.1}$
 \end_inset
 
- to 
+ (1.105...) to 
 \begin_inset Formula $e$
 \end_inset
 
- and is usually labeled LL
+ (2.718...) and is usually labeled LL
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -1787,6 +1788,280 @@ Therefore the left-of-LL
 
 ,
  here's an illustration:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ll2.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To obtain the square root of 6,
+ we have placed C2 over LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ 6,
+ and our C1 index has been left hanging over to the left.
+ When this happens we are used to just using the C10 index instead.
+ So on the rule above the hairline has been placed over C10.
+\end_layout
+
+\begin_layout Standard
+In normal multiplication this only leaves us a factor of 10 out,
+ but in this case LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ is showing a value around 8000,
+ which is clearly wrong.
+ However we see that the hairline is over LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ 2.45,
+ which is pretty close to the actual value of 2.449...
+\end_layout
+
+\begin_layout Standard
+So here's the rules:
+\end_layout
+
+\begin_layout Standard
+If you can use the C1 index and read your power and root values on one LL scale,
+ then life is easy.
+\end_layout
+
+\begin_layout Standard
+if you move the C scale left and have to use the C10 index for a root,
+ you go down an LL scale - you are getting a smaller number.
+\end_layout
+
+\begin_layout Standard
+On the other hand if you are getting a power,
+ (for example 2.45
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ ) and have to use the C10 index,
+ you go up a scale - to LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+6 in the above illustration,
+ as you are getting a bigger number.
+\end_layout
+
+\begin_layout Standard
+Most slide rules also have an LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+ scale as well,
+ and some have an LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+
+ scale - getting ever closer to 1,
+ but not quite getting there.
+\end_layout
+
+\begin_layout Standard
+So that's how it works,
+ now a bit more on why.
+ Back to:
+\begin_inset Formula 
+\[
+\log_{10}(\log_{e}y^{n})=\log_{10}n+\log_{10}(\log_{e}y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Another nice result,
+ if n is a number such as 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ for a square root,
+ the above becomes:
+\begin_inset Formula 
+\[
+\log_{10}(\log_{e}y^{\frac{1}{n}})=\log_{10}\frac{1}{n}+\log_{10}(\log_{e}y)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\log_{10}(\log_{e}y^{\frac{1}{n}})=\log_{10}1-\log_{10}n+\log_{10}(\log_{e}y)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\log_{10}(\log_{e}y^{\frac{1}{n}})=-\log_{10}n+\log_{10}(\log_{e}y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So raising to a power is adding logs,
+ and getting a root is subtracting logs.
+\end_layout
+
+\begin_layout Standard
+On our illustration above,
+ the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+6 value is directly under D 1.792..
+ which is 
+\begin_inset Formula $\log_{e}6$
+\end_inset
+
+.
+ The distance along the ruler from D1 to this value is 
+\begin_inset Formula $\log_{10}(\log_{e}6)$
+\end_inset
+
+,
+ and as we are looking for a square root we are subtracting 
+\begin_inset Formula $\log_{10}2$
+\end_inset
+
+ .If we were looking for the square of 6 we would be adding 
+\begin_inset Formula $\log_{10}2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To subtract 
+\begin_inset Formula $\log_{10}2$
+\end_inset
+
+ we normally place C2 above LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+6 and go to the left to C1,
+ and the job is done,
+ but in this case we need to use C10,
+ so we are actually adding a further 
+\begin_inset Formula $\log_{10}10$
+\end_inset
+
+,
+ and doing:
+\begin_inset Formula 
+\[
+\log_{10}(\log_{e}y)-\log_{10}n+\log_{10}10
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But that value is too big by the addition of 
+\begin_inset Formula $\log_{10}10$
+\end_inset
+
+,
+ we are actually getting:
+\begin_inset Formula 
+\[
+\log_{10}(10\log_{e}y)-\log_{10}n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\log_{10}(\log_{e}y^{10})-\log_{10}n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And this gives us the square root of y**10,
+ putting y=6,
+ n=2,
+ gives us 7776,
+ which is our incorrect value.
+ Hence we need another scale z = y^0.1
+\end_layout
+
+\begin_layout Standard
+An if our ll3 scale is y=e^x,
+ our new scale ll2 must be z=e^0.1x
 \end_layout
 
 \begin_layout Bibliography

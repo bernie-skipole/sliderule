@@ -6,8 +6,14 @@ from working import Rule
 
 if __name__ == "__main__":
 
+    # place C10 and hairline on LL02 root of six
 
-    rl = Rule(xvalue = math.log(4), right = True, hairline=math.log(64),
+    # index on LL02 root of six
+    # e**0.1x = math.sqrt(6)
+    # 0.1x = math.log(math.sqrt(6))
+
+    x = 10*math.log(math.sqrt(6))
+    rl = Rule(xvalue = x, right = False, hairline=x,
                    topruleheight = 0,
                    midruleheight = 120,
                    btmruleheight = 260)
