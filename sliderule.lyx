@@ -1853,7 +1853,7 @@ If you can use the C1 index and read your power and root values on one LL scale,
 \end_layout
 
 \begin_layout Standard
-if you move the C scale left and have to use the C10 index for a root,
+If you move the C scale left and have to use the C10 index for a root,
  you go down an LL scale - you are getting a smaller number.
 \end_layout
 
@@ -1869,7 +1869,16 @@ On the other hand if you are getting a power,
 \end_inset
 
  ) and have to use the C10 index,
- you go up a scale - to LL
+ you go up a scale - from LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2 
+\end_layout
+
+\end_inset
+
+to LL
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -2051,17 +2060,152 @@ But that value is too big by the addition of
 \end_layout
 
 \begin_layout Standard
-And this gives us the square root of y**10,
- putting y=6,
- n=2,
- gives us 7776,
- which is our incorrect value.
- Hence we need another scale z = y^0.1
+Putting y=6 and n=2 into this,
+ gives us the square root of 
+\begin_inset Formula $6^{10}$
+\end_inset
+
+,
+ which is 7776,
+ and we have seen that on the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ scale.
+ Hence we need another scale:
+\begin_inset Formula 
+\[
+z=y^{0.1}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-An if our ll3 scale is y=e^x,
- our new scale ll2 must be z=e^0.1x
+So we are back to:
+\begin_inset Formula 
+\[
+\log_{10}(\log_{e}z^{\frac{1}{n}})=\log_{10}(\log_{e}z)-\log_{10}n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and this will give us the correct result on the new scale.
+\end_layout
+
+\begin_layout Standard
+And as our LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ scale is
+\begin_inset Formula 
+\[
+y=e^{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our new scale LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ must be:
+\begin_inset Formula 
+\[
+z=e^{0.1x}
+\]
+
+\end_inset
+
+Which is indeed what we have,
+ and shows that if we use the C10 index to find a root,
+ we have to drop down to the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ scale to get the answer.
+\end_layout
+
+\begin_layout Standard
+It seems reasonable to think that for multiplication,
+ using the C10 index means going up or down by a factor of 10,
+ whereas on a LogLog scale it means going up or down by a power of 10.
+\end_layout
+
+\begin_layout Standard
+Usually a slide rule will have further scales,
+ of 
+\begin_inset Formula $e^{-x}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e^{-0.1x}$
+\end_inset
+
+ and 
+\begin_inset Formula $e^{-0.01x}$
+\end_inset
+
+,
+ these are marked in red,
+ and instead of increasing from left to right,
+ they decrease from left to right.
+ Otherwise they operate in a very similar manner.
+\end_layout
+
+\begin_layout Standard
+The best way to explore this further is to try some calculations on a real Slide Rule,
+ or on one of the web based simulations such as at
+\begin_inset CommandInset citation
+LatexCommand cite
+key "emulator"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In summary,
+ Slide Rules are certainly obsolete,
+ but they have a beauty to those who can appreciate it.
+ If you find your grandparents old Slide Rule in an attic box,
+ don't throw it away,
+ no one will ever make new ones again.
+ 
 \end_layout
 
 \begin_layout Bibliography
@@ -2073,6 +2217,17 @@ literal "false"
 \end_inset
 
 https://en.wikipedia.org/wiki/Logarithm
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "emulator"
+literal "false"
+
+\end_inset
+
+https://sliderules.lovett.com/new_wolf_simulators/webSimulator/index.html
 \end_layout
 
 \end_body
