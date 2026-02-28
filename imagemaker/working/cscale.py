@@ -15,11 +15,12 @@ def _vertical(length, xpos, ybot, col="black") -> dict:
 
 
 
-def addCscale(doc, rl) -> ET.Element:
-    "Adds the C scale to the middle rule, returns the doc"
+def addCscale(rl, rightmove):
+    "Adds the C scale to the middle rule, returns the scale element"
 
-    ybot = rl.topruleheight + rl.midruleheight # y value of bot of scale
-    rightmove = rl.slidermove
+    ybot = 100 # y value of bot of scale
+
+    doc = ET.Element('g')
 
     # C mark
     Cmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ybot-30), "fill":"black", "font-size":"24"})
@@ -69,7 +70,7 @@ def addCscale(doc, rl) -> ET.Element:
                 textstr = str(x)
                 fontsize = 12
                 texty = ybot-33
-        elif r < 20000:             # x < 3, r < 20000
+        elif r < 30000:             # x < 4, r < 20000
             if r % 500 == 0:        # at x =1.05, 1.15, etc
                 length = 20
 

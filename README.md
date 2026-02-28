@@ -8,6 +8,6 @@ The article contains several illustrative sliderule scales.
 A typical image generated is
 
 
-![Test image](https://raw.githubusercontent.com/bernie-skipole/sliderule/main/image1.svg)
+![Test image](https://raw.githubusercontent.com/bernie-skipole/sliderule/main/twoxthree.svg)
 
 

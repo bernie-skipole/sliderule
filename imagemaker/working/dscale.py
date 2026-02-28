@@ -12,11 +12,12 @@ def _vertical(length, xpos, ytop, col="black") -> dict:
     return {"x1":str(xpos), "y1":str(ytop), "x2":str(xpos), "y2":str(ytop+length), "style":f"stroke:{col};stroke-width:1"}
 
 
-def addDscale(doc, rl) -> ET.Element:
-    "Adds the D scale to the bottom rule, returns the doc"
+def addDscale(rl, rightmove):
+    "Adds the D scale to the bottom rule, returns the scale element"
 
-    ytop = rl.topruleheight + rl.midruleheight # y value of top of scale
-    rightmove = rl.mainmove
+    ytop = 0 # y value of top of scale
+
+    doc = ET.Element('g')
 
     # D mark
     Dmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ytop+40),"fill":"black", "font-size":"24"})
@@ -66,7 +67,7 @@ def addDscale(doc, rl) -> ET.Element:
                 textstr = str(x)
                 fontsize = 12
                 texty = ytop+40
-        elif r < 20000:             # x < 3, r < 20000
+        elif r < 30000:             # x < 4, r < 30000
             if r % 500 == 0:        # at x =1.05, 1.15, etc
                 length = 20
 
