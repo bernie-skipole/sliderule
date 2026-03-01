@@ -1070,7 +1070,7 @@ The distance to 6 of the D scale is
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename fourdivsix.svg
+	filename sixdivfour.svg
 	scale 55
 
 \end_inset
@@ -1095,7 +1095,8 @@ Notice,
 \end_inset
 
  the 6 is on the bottom scale,
- and the four is above it.
+ and the four is above it,
+ which is just due to the layout of these sliding scales.
 \end_layout
 
 \begin_layout Standard

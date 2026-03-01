@@ -19,16 +19,18 @@ from .ll2scale import addLL2scale
 class Rule:
     "Defines a rule dimensions"
 
-
-    def __init__(self, xvalue:float = 1.0, right:bool = True, hairline:float=0.0):
+    def __init__(self, xvalue:float = 1.0, right:bool = True, hairline:float=0.0,
+                      topruleheight = 120,
+                      midruleheight = 200,
+                      btmruleheight = 120):
         """xvalue is where the C scale index is placed over the D value
            right is True if the mid scale is moved to the right
            right is False if the mid scale is moved to the left
-           hairline is the D value on which the hairline cursor is placed, or zero if no hairline is used """
+           hairline is where the hairline cursor is placed over the D value, or zero if no hairline is used"""
 
-        self.topruleheight = 0   # 120
-        self.midruleheight = 0   # 200
-        self.btmruleheight = 0   # 120
+        self.topruleheight = topruleheight
+        self.midruleheight = midruleheight
+        self.btmruleheight = btmruleheight
 
         self.scalewidth = 900
         self.leftmargin = 50
@@ -40,11 +42,6 @@ class Rule:
         if xvalue<1 or xvalue>10:
             raise ValueError("Invalid x value, must be between 1 and 10")
 
-        if xvalue == 1:
-            move = 0
-        else:
-            move = self.scalewidth*math.log10(10.0/xvalue)   # This is the movement of a rule
-
         if right:
             self.mainmove = 0.0
             if xvalue == 1:
@@ -52,7 +49,7 @@ class Rule:
             else:
                 self.slidermove = self.scalewidth*math.log10(xvalue)   # This is the movement of a rule
         else:
-            self.slidermove = 0
+            self.slidermove = 0.0
             if xvalue == 1:
                 self.mainmove = 0.0
             else:
@@ -72,44 +69,28 @@ class Rule:
           font-weight: Thin;
           }
     """
-        # List of scales to add to the image
-        self.scales = []
 
-
-    def _maketoprule(self):
-        "top rule"
+        # top rule
         if self.topruleheight:
             ### rectangle of background colour
-            ET.SubElement(self._doc, 'rect', {"width":str(self.rulewidth), "height":str(self.topruleheight), "x":str(self.mainmove),"y":"0", "fill":"#f9fc69"})
+            ET.SubElement(self._doc, 'rect', {"width":str(self.rulewidth), "height":str(self.topruleheight), "x":str(self.mainmove),"y":"0",
+                                              "style":"fill:#f9fc69;stroke-width:1;stroke:black"})
 
-            # bottom line
-            ET.SubElement(self._doc, 'line', {"x1":str(self.mainmove), "y1":str(self.topruleheight), "x2":str(self.mainmove+self.rulewidth), "y2":str(self.topruleheight), "style":"stroke:black;stroke-width:1"})
-
-
-    def _makemidrule(self):
-        "midrule - the slider"
+        # midrule - the slider
         if self.midruleheight:
             ### rectangle of background colour
-            ET.SubElement(self._doc, 'rect', {"width":str(self.rulewidth), "height":str(self.midruleheight), "x":str(self.slidermove),"y":str(self.topruleheight), "fill":"#f9fc69"})
-            # top line
-            ET.SubElement(self._doc, 'line', {"x1":str(self.slidermove), "y1":str(self.topruleheight), "x2":str(self.slidermove+self.rulewidth), "y2":str(self.topruleheight), "style":"stroke:black;stroke-width:1"})
-            # bottom line
-            ET.SubElement(self._doc, 'line', {"x1":str(self.slidermove), "y1":str(self.topruleheight+self.midruleheight), "x2":str(self.slidermove+self.rulewidth), "y2":str(self.topruleheight+self.midruleheight), "style":"stroke:black;stroke-width:1"})
+            ET.SubElement(self._doc, 'rect', {"width":str(self.rulewidth), "height":str(self.midruleheight), "x":str(self.slidermove),"y":str(self.topruleheight),
+                                              "style":"fill:#f9fc69;stroke-width:1;stroke:black"})
 
-
-    def _makebtmrule(self):
-        "bottom rule"
+        # bottom rule
         if self.btmruleheight:
             # bottom rule
             heightofy = self.topruleheight + self.midruleheight
             ### rectangle of background colour
-            ET.SubElement(self._doc, 'rect', {"width":str(self.rulewidth), "height":str(self.btmruleheight), "x":str(self.mainmove),"y":str(heightofy), "fill":"#f9fc69"})
-            # top line
-            ET.SubElement(self._doc, 'line', {"x1":str(self.mainmove), "y1":str(heightofy), "x2":str(self.mainmove+self.rulewidth), "y2":str(heightofy), "style":"stroke:black;stroke-width:1"})
+            ET.SubElement(self._doc, 'rect', {"width":str(self.rulewidth), "height":str(self.btmruleheight), "x":str(self.mainmove),"y":str(heightofy),
+                                              "style":"fill:#f9fc69;stroke-width:1;stroke:black"})
 
-
-    def _makehairline(self):
-        "hairline"
+        # hairline
         if self.hairline:
             ET.SubElement(self._doc, 'line', {"x1":str(self.hairlinepos),
                                         "y1":"0",
@@ -122,7 +103,6 @@ class Rule:
         if not self.hairline:
             return self.mainmove
         return self.mainmove + self.leftmargin + self.scalewidth*math.log10(self.hairline)
-
 
     @property
     def imagewidth(self):
@@ -137,73 +117,47 @@ class Rule:
         return self.topruleheight + self.midruleheight + self.btmruleheight
 
     def write(self, filename):
-        # set height in the image
-        self._doc.set("height", str(self.imageheight))
-        self._maketoprule()
-        self._makemidrule()
-        self._makebtmrule()
-        self._makehairline()
-        idx = len(self._doc)
-        # and add the scales
-        for index, scale in enumerate(self.scales):
-            self._doc.insert(index+idx, scale)
         tree = ET.ElementTree(self._doc)
         tree.write(filename, xml_declaration=True)
 
-    def _createscale(self, fn, ht, btmrule, midrule, toprule):
+    def _createscale(self, fn, btmrule, midrule, toprule):
         if toprule>-1:
             rightmove = self.mainmove
         elif midrule>-1:
             rightmove = self.slidermove
         elif btmrule>-1:
             rightmove = self.mainmove
+        else:
+            raise ValueError("At least one rule must be specified")
         element = fn(self, rightmove)
-        if toprule==0:
-            if ht>self.topruleheight:
-                self.topruleheight = ht
-        elif toprule>0:
-            element.set("transform", f"translate(0 {toprule})")
-            if ht+toprule>self.topruleheight:
-                self.topruleheight = ht+toprule
+        if toprule>-1:
+            if toprule>0:
+                element.set("transform", f"translate(0 {toprule})")
         elif midrule>-1:
-            element.set("transform", f"translate(0 {self.topruleheight + midrule})")
-            if ht+midrule>self.midruleheight:
-                self.midruleheight = ht+midrule
+            if self.topruleheight + midrule > 0:
+                element.set("transform", f"translate(0 {self.topruleheight + midrule})")
         elif btmrule>-1:
-            element.set("transform", f"translate(0 {self.topruleheight + self.midruleheight + btmrule})")
-            if ht+btmrule>self.btmruleheight:
-                self.btmruleheight = ht+btmrule
-        self.scales.append(element)
+            if self.topruleheight + self.midruleheight + btmrule > 0:
+                element.set("transform", f"translate(0 {self.topruleheight + self.midruleheight + btmrule})")
+        self._doc.append(element)
 
+    def addDscale(self, btmrule=-1, midrule=-1, toprule=-1):
+        self._createscale(addDscale, btmrule, midrule, toprule)
 
-    def addDscale(self, ht, btmrule=-1, midrule=-1, toprule=-1):
-        self._createscale(addDscale, ht, btmrule, midrule, toprule)
+    def addCscale(self, btmrule=-1, midrule=-1, toprule=-1):
+        self._createscale(addCscale, btmrule, midrule, toprule)
 
-    def addCscale(self, ht, btmrule=-1, midrule=-1, toprule=-1):
-        self._createscale(addCscale, ht, btmrule, midrule, toprule)
+    def addCFscale(self, btmrule=-1, midrule=-1, toprule=-1):
+        self._createscale(addCFscale, btmrule, midrule, toprule)
 
-    def addCFscale(self, ht, btmrule=-1, midrule=-1, toprule=-1):
-        self._createscale(addCFscale, ht, btmrule, midrule, toprule)
+    def addDFscale(self, btmrule=-1, midrule=-1, toprule=-1):
+        self._createscale(addDFscale, btmrule, midrule, toprule)
 
-    def addDFscale(self, ht, btmrule=-1, midrule=-1, toprule=-1):
-        self._createscale(addDFscale, ht, btmrule, midrule, toprule)
+    def addLL3scale(self, btmrule=-1, midrule=-1, toprule=-1):
+        self._createscale(addLL3scale, btmrule, midrule, toprule)
 
-    def addLL3scale(self, ht, btmrule=-1, midrule=-1, toprule=-1):
-        self._createscale(addLL3scale, ht, btmrule, midrule, toprule)
-
-    def addLL2scale(self, ht, btmrule=-1, midrule=-1, toprule=-1):
-        self._createscale(addLL2scale, ht, btmrule, midrule, toprule)
-
-
-
-
-
-
-
-
-
-
-
+    def addLL2scale(self, btmrule=-1, midrule=-1, toprule=-1):
+        self._createscale(addLL2scale, btmrule, midrule, toprule)
 
 
 
