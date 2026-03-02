@@ -16,7 +16,7 @@ def _vertical(length, xpos, ybot, col="black") -> dict:
 
 
 def addCscale(rl, rightmove):
-    "Adds the C scale to the middle rule, returns the scale element"
+    "Adds the C scale to the rule, returns the scale element"
 
     ybot = 100 # y value of bot of scale
 

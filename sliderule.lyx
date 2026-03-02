@@ -917,7 +917,7 @@ To multiply two numbers using a slide rule,
 \end_layout
 
 \begin_layout Standard
-By aligning the 1 of scale C above the 2 of scale D,
+By aligning the 1 of scale C (often called the index) above the 2 of scale D,
  we have added the 
 \begin_inset Formula $\log2$
 \end_inset
@@ -1154,10 +1154,12 @@ Powers of ten do not bother us,
 \end_layout
 
 \begin_layout Standard
-We can be confident that reading right along a scale from the leftmost 1 is adding logs (multiplying) and moving left to the leftmost 1 is subtracting logs (dividing).
- If necessary to get a result,
- add or subtract the entire scale,
- which is the equivalent of multiplying or dividing by 10.
+We can be confident that setting a C index,
+ of 1 or 10 over a number and then moving along C is multiplication,
+ and setting a C number over a D number,
+ then moving along C to an index,
+ 1 or 10,
+ gives us a division.
 \end_layout
 
 \begin_layout Subsection
@@ -1172,52 +1174,16 @@ Another twist to the tale of multiplication.
 
 \begin_layout Standard
 Consider the multiplication of 
-\begin_inset Formula $12\times8$
+\begin_inset Formula $2\times7\times3$
 \end_inset
 
 ,
- or in other words 
-\begin_inset Formula $\log12+\log8$
+ using the C10 index we have to change the order to 
+\begin_inset Formula $7\times2\times3$
 \end_inset
 
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename eighttwelve.svg
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-So the 1 of the C scale has been set over 1.2 of D,
- (which is the distance 
-\begin_inset Formula $\log1.2$
-\end_inset
-
- from D1) and then following along the C scale to the 8,
- which is adding a further 
-\begin_inset Formula $\log8$
-\end_inset
-
-.
- So the distance along D is now 
-\begin_inset Formula $\log1.2+\log8$
-\end_inset
-
- and the product can be read on the D scale of 9.6 (or 96 using the mental calculation of the decimal point).
- Nothing wrong with that,
- unfortunately with a real sliderule that's where your thumb is!
-\end_layout
-
-\begin_layout Standard
-Physically you are holding the slide rule with a hand at either end,
- and for numbers at the ends,
- that can be slightly awkward.
+ which is annoying,
+ especially if your mind is on a calculation rather than how to use a slide rule.
 \end_layout
 
 \begin_layout Standard
@@ -1228,13 +1194,15 @@ Most Slide Rules also have the scales CF and DF,
 \end_inset
 
 ,
- and which puts a 10 value more or less in the centre of the scale.
- See below:
+ and,
+ at what we would consider the 10 point,
+ is labeled as 1.
+ A lone DF shown below:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename withhairline.svg
+	filename df.svg
 	scale 60
 
 \end_inset
@@ -1243,50 +1211,30 @@ Most Slide Rules also have the scales CF and DF,
 \end_layout
 
 \begin_layout Standard
-Ignore the hairline marker for now.
- We are still looking for 
-\begin_inset Formula $8\times12$
+Now look again at 
+\begin_inset Formula $2\times7$
+\end_inset
+
+,
+ but using the C1 index,
+ and with a Slide Rule that has CF and DF scales:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename twoxseven.svg
+	scale 50
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-In this case,
- we have done the multiplication using the central sliding portion and the CF and DF scales only.
- CF does not have a 1,
- but we know 10 does a reasonable job,
- so we have set CF 10 against DF 8,
- which in terms of distance is 
-\begin_inset Formula $\log8$
-\end_inset
-
- along DF from the DF 1 which would be off to the left if it had one.
- Then as we want to add 
-\begin_inset Formula $\log12$
-\end_inset
-
- along the CF scale,
- we can go to the CF12,
- and read the result on the DF scale.
-\end_layout
-
-\begin_layout Standard
-So this is 
-\begin_inset Formula $\log8-\log10+\log12,$
-\end_inset
-
- (the 
-\begin_inset Formula $-\log10$
-\end_inset
-
- occurred because we used C10 rather than C1),
- and we can read the result of 
-\begin_inset Formula $\frac{8\times12}{10}$
-\end_inset
-
- on DF of 9.6 (96).
- All conveniently done in the centre of the ruler.
+With C1 over D2,
+ the C7 is off to the right,
+ but the CF7 is there,
+ and reading on to the DF scale we can see the answer 1.4 (14).
 \end_layout
 
 \begin_layout Standard

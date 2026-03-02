@@ -13,7 +13,7 @@ def _vertical(length, xpos, ytop, col="black") -> dict:
 
 
 def addDscale(rl, rightmove):
-    "Adds the D scale to the bottom rule, returns the scale element"
+    "Adds the D scale to the rule, returns the scale element"
 
     ytop = 0 # y value of top of scale
 

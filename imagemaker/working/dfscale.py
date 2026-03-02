@@ -13,11 +13,12 @@ def _vertical(length, xpos, ybot, col="black") -> dict:
     return {"x1":str(xpos), "y1":str(ybot), "x2":str(xpos), "y2":str(ybot-length), "style":f"stroke:{col};stroke-width:1"}
 
 
-def addDFscale(doc, rl) -> ET.Element:
-    "Adds the DF scale to the top rule, returns the doc"
+def addDFscale(rl, rightmove) -> ET.Element:
+    "Adds the DF scale to the top rule, returns the scale element"
 
-    ybot = rl.topruleheight # y value of bottom of the top scale
-    rightmove = rl.mainmove
+    ybot = 100 # y value of bot of scale
+
+    doc = ET.Element('g')
 
     # DF mark
     DFmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 8), "y":str(ybot-25),"fill":"black", "font-size":"24"})
@@ -54,9 +55,9 @@ def addDFscale(doc, rl) -> ET.Element:
         textstr = ''
         fontsize = 16
         texty = ybot-76
-        if r == 90000 or r == 190000 or r == 290000:            # at x == 10,20,30
+        if r == 90000 or r == 190000 or r == 290000:            # at x == 10,20,30, displayed as 1,2,3
             length = 70
-            textstr = str(round(x))
+            textstr = str(round(x/10))
             fontsize = 18
         elif r % 10000 == 0 and r<90000:         # at x = 2, 3, etc up to x<10
             length = 60
@@ -65,13 +66,15 @@ def addDFscale(doc, rl) -> ET.Element:
             texty = ybot-67
         elif r == 140000 or r == 240000:                  # at x = 15, 25, r = 140000, 240000
             length = 60
-            textstr = str(round(x))
+            z = x/10.0
+            textstr = f"{z:.1f}"                          # displayed as 1.5, 2.5
             fontsize = 14
             texty = ybot-65
         elif r % 10000 == 0:         # at x = 11, 12, etc, and r must be greater than 90000, x>10
             length = 30
             if r < 190000:           # only do text for x<20, r <190000
-                textstr = f"{x:.0f}"
+                z = x/10.0 
+                textstr = f"{z:.1f}"    # displayed as 1.1, 1.2
                 fontsize = 12
                 texty = ybot-35
         elif r % 5000 == 0:         # at x = 1.5, 2.5, 3.5, etc However text only at x<10
