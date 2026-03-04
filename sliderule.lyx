@@ -1238,6 +1238,56 @@ With C1 over D2,
 \end_layout
 
 \begin_layout Standard
+But now we want to multiply 1.4 by three,
+ if we move the CF1 index over 1.4,
+ we find CF3 is off to the right.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename threexfourteen.svg
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But that's still ok,
+ as we can see C3,
+ which is over 4.2 (42),
+ which is the correct answer,
+ we have 
+\begin_inset Formula $2\times7\times3$
+\end_inset
+
+,
+ by swapping across the scales.
+\end_layout
+
+\begin_layout Standard
+This works because a movement of the central slider,
+ by 
+\begin_inset Formula $\log2$
+\end_inset
+
+ in our initial move,
+ is by a distance of 
+\begin_inset Formula $\log2$
+\end_inset
+
+ for both the C and CF scales,
+ and so is multiplying by 2 on both scales,
+ and 
+\begin_inset Formula $2\times7$
+\end_inset
+
+works on CF and DF just fine.
+\end_layout
+
+\begin_layout Standard
 The DF scale has another use,
  as its starting point of 
 \begin_inset Formula $\pi$
