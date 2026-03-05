@@ -26,11 +26,12 @@ def _text(doc, textstr, xpos, texty, fontsize):
 
 
 
-def addLL2scale(doc, rl) -> ET.Element:
-    "Adds the LL2 scale to the bottom rule, returns the doc"
+def addLL2scale(rl, rightmove) -> ET.Element:
+    "Adds the LL2 scale to the rule, returns the scale element"
 
-    ybot = rl.topruleheight + rl.midruleheight + 250 # y value of bot of scale
-    rightmove = rl.mainmove
+    ybot = 0
+
+    doc = ET.Element('g')
 
     # LL2 mark
     LLmark = ET.SubElement(doc, 'text', {"x":str(rightmove + 6), "y":str(ybot-30), "fill":"black", "font-size":"24"})
@@ -110,8 +111,6 @@ def addLL2scale(doc, rl) -> ET.Element:
             _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, xpos, texty, fontsize)
-
-
 
     return doc
 

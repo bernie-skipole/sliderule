@@ -1284,7 +1284,7 @@ This works because a movement of the central slider,
 \begin_inset Formula $2\times7$
 \end_inset
 
-works on CF and DF just fine.
+ works on CF and DF just fine.
 \end_layout
 
 \begin_layout Standard
@@ -1819,7 +1819,7 @@ To obtain the square root of 6,
 
 \end_inset
 
- 6,
+6,
  and our C1 index has been left hanging over to the left.
  When this happens we are used to just using the C10 index instead.
  So on the rule above the hairline has been placed over C10.
@@ -1923,6 +1923,10 @@ Most slide rules also have an LL
  but not quite getting there.
 \end_layout
 
+\begin_layout Subsection
+Why that worked
+\end_layout
+
 \begin_layout Standard
 So that's how it works,
  now a bit more on why.
@@ -1961,6 +1965,14 @@ Another nice result,
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+But 
+\begin_inset Formula $\log_{10}1$
+\end_inset
+
+ is just zero.
 \begin_inset Formula 
 \[
 \log_{10}(\log_{e}y^{\frac{1}{n}})=-\log_{10}n+\log_{10}(\log_{e}y)
@@ -2002,7 +2014,8 @@ On our illustration above,
 \begin_inset Formula $\log_{10}2$
 \end_inset
 
- .If we were looking for the square of 6 we would be adding 
+ .
+ If we were looking for the square of 6 we would be adding 
 \begin_inset Formula $\log_{10}2$
 \end_inset
 
@@ -2043,7 +2056,8 @@ To subtract
 \end_layout
 
 \begin_layout Standard
-But that value is too big by the addition of 
+But we cannot ignore powers of 10,
+ and that value is too big by the addition of 
 \begin_inset Formula $\log_{10}10$
 \end_inset
 
@@ -2105,7 +2119,7 @@ So we are back to:
 
 \end_inset
 
-But we know this is simply:
+Which we know is simply:
 \begin_inset Formula 
 \[
 \log_{10}(\log_{e}z^{\frac{1}{n}})
@@ -2117,7 +2131,7 @@ But we know this is simply:
 \end_layout
 
 \begin_layout Standard
-and this will give us the correct result on the new scale.
+and this will give us the correct result on the new scale of z.
 \end_layout
 
 \begin_layout Standard

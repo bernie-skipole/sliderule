@@ -16,19 +16,19 @@ if __name__ == "__main__":
     rl = Rule(xvalue = x, right = False, hairline=x,
                    topruleheight = 0,
                    midruleheight = 120,
-                   btmruleheight = 260)
+                   btmruleheight = 270)
 
     # Add a D scale
-    rl.addDscale()
+    rl.addDscale(btmrule=0)
 
     # Add a C scale
-    rl.addCscale()
+    rl.addCscale(midrule=20)
 
     # Add a LL3 scale
-    rl.addLL3scale()
+    rl.addLL3scale(btmrule=170)
 
     # Add a LL2 scale
-    rl.addLL2scale()
+    rl.addLL2scale(btmrule=260)
 
     filename = "ll2.svg"
 

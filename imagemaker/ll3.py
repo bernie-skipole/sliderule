@@ -13,13 +13,13 @@ if __name__ == "__main__":
                    btmruleheight = 180)
 
     # Add a D scale
-    rl.addDscale()
+    rl.addDscale(btmrule=0)
 
     # Add a C scale
-    rl.addCscale()
+    rl.addCscale(midrule=20)
 
     # Add a LL3 scale
-    rl.addLL3scale()
+    rl.addLL3scale(btmrule=170)
 
     filename = "ll3.svg"
 
