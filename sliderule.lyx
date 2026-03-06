@@ -343,7 +343,7 @@ Taking the log of both sides,
 
 \begin_inset Formula 
 \[
-\log_{b}cd=\log b^{p}b^{q}=\log_{b}b^{p+q}=p+q
+\log_{b}cd=\log_{b}b^{p}b^{q}=\log_{b}b^{p+q}=p+q
 \]
 
 \end_inset
@@ -364,8 +364,7 @@ But we know
 
 \end_inset
 
-So that means we are mapping the multiplication of two numbers,
- to an addition!
+We are mapping the multiplication of two numbers to an addition!
  Which is the basis of how a slide rule works.
 \end_layout
 
@@ -489,7 +488,7 @@ And if we really want to push the boat out,
 \begin_inset Formula $n$
 \end_inset
 
- times multiplication with logs:
+ multiplication with logs:
 \begin_inset Formula 
 \[
 \log_{a}(\log_{b}x^{n})=\log_{a}(n\log_{b}x)=\log_{a}n+\log_{a}(\log_{b}x)
@@ -1169,25 +1168,11 @@ CF and DF
 \begin_layout Standard
 Another twist to the tale of multiplication.
  Depending on the model,
- some slide rules have a selection of different scales on both sides which are often useful.
+ some Slide Rules have a selection of different scales on both sides which are often useful.
 \end_layout
 
 \begin_layout Standard
-Consider the multiplication of 
-\begin_inset Formula $2\times7\times3$
-\end_inset
-
-,
- using the C10 index we have to change the order to 
-\begin_inset Formula $7\times2\times3$
-\end_inset
-
- which is annoying,
- especially if your mind is on a calculation rather than how to use a slide rule.
-\end_layout
-
-\begin_layout Standard
-Most Slide Rules also have the scales CF and DF,
+Most have the scales CF and DF,
  which are the same as C and D but 'Folded',
  by the scales being offset by 
 \begin_inset Formula $x=\pi$
@@ -1208,6 +1193,20 @@ Most Slide Rules also have the scales CF and DF,
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Consider the multiplication of 
+\begin_inset Formula $2\times7\times3$
+\end_inset
+
+,
+ using the C10 index we have to change the order to 
+\begin_inset Formula $7\times2\times3$
+\end_inset
+
+ which is annoying,
+ especially if your mind is on a calculation rather than how to use a slide rule.
 \end_layout
 
 \begin_layout Standard
@@ -1239,7 +1238,7 @@ With C1 over D2,
 
 \begin_layout Standard
 But now we want to multiply 1.4 by three,
- if we move the CF1 index over 1.4,
+ if we move the CF1 index under that DF1.4,
  we find CF3 is off to the right.
  
 \end_layout
@@ -1332,7 +1331,7 @@ Going right back to the section describing logs,
 
 \end_inset
 
-I've used a variable
+I've used a variable 
 \begin_inset Formula $y$
 \end_inset
 
@@ -1561,13 +1560,6 @@ I'll give due warning;
 
  values less than 1,
  so that's six new scales!
- At 
-\begin_inset Formula $y=1$
-\end_inset
-
- all powers of y are irrelevant as 1 to any power is just 1.
- So these multiple scales can get very close to 1,
- but do not actually get there.
 \end_layout
 
 \begin_layout Standard
@@ -1694,10 +1686,6 @@ The alignment above also shows how roots are taken,
 \end_inset
 
 64 is a division,
- which is used to calculate 
-\begin_inset Formula $64^{\frac{1}{3}}$
-\end_inset
-
  and moving to C1 gets the cubed root on the LL
 \begin_inset script subscript
 

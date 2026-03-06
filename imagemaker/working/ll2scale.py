@@ -29,7 +29,7 @@ def _text(doc, textstr, xpos, texty, fontsize):
 def addLL2scale(rl, rightmove) -> ET.Element:
     "Adds the LL2 scale to the rule, returns the scale element"
 
-    ybot = 0
+    ybot = 100
 
     doc = ET.Element('g')
 

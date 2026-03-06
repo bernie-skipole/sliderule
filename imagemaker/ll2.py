@@ -25,10 +25,10 @@ if __name__ == "__main__":
     rl.addCscale(midrule=20)
 
     # Add a LL3 scale
-    rl.addLL3scale(btmrule=170)
+    rl.addLL3scale(btmrule=70)
 
     # Add a LL2 scale
-    rl.addLL2scale(btmrule=260)
+    rl.addLL2scale(btmrule=160)
 
     filename = "ll2.svg"
 

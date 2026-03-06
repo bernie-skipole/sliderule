@@ -19,7 +19,7 @@ if __name__ == "__main__":
     rl.addCscale(midrule=20)
 
     # Add a LL3 scale
-    rl.addLL3scale(btmrule=170)
+    rl.addLL3scale(btmrule=70)
 
     filename = "ll3.svg"
 
