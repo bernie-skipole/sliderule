@@ -1782,8 +1782,91 @@ Therefore the left-of-LL
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+So the LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ scale of 
+\begin_inset Formula $e^{0.1x}$
+\end_inset
+
+ is the equivalent of adding a scale 
+\begin_inset Formula $b^{x}$
+\end_inset
+
+ with the base b of 
+\begin_inset Formula $e^{0.1}$
+\end_inset
+
 ,
  here's an illustration:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename onedottwosquared.svg
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above shows how the square of 1.2 is obtained,
+ the C1 index is placed over LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ 1.2,
+ the hairline would be used to help with this.
+ The square is then found by placing the hairline over C2 and reading the result on LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ of 1.44
+\end_layout
+
+\begin_layout Standard
+However this still leaves us with the problem of getting the square root of 6,
+ which is an action that spans both LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+ and LL
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ so here's how its done:
 \end_layout
 
 \begin_layout Standard

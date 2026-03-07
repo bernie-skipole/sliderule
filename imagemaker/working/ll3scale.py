@@ -3,8 +3,10 @@ import xml.etree.ElementTree as ET
 import math
 
 
-def _vertical(doc, length, xpos, ybot, col="black") -> dict:
-    """length is the length of the vertical line
+def _vertical(doc, length, xpos, ybot, col="black"):
+    """Creates a vertical line
+       doc is the scale element to which this line will be inserted
+       length is the length of the vertical line
        ybot is the ending y position
        xpos is the x position
        col is the colour of the line"""
@@ -13,7 +15,9 @@ def _vertical(doc, length, xpos, ybot, col="black") -> dict:
     vline = {"x1":str(xpos), "y1":str(ybot), "x2":str(xpos), "y2":str(ybot-length), "style":f"stroke:{col};stroke-width:1"}
     ET.SubElement(doc, 'line', vline)
 
+
 def _text(doc, textstr, xpos, texty, fontsize):
+    "Adds text"
     if textstr:
         if len(textstr) == 1:
             textpos = round(xpos - 4)    #  textpos This is in pixels
@@ -80,7 +84,7 @@ def addLL3scale(rl, rightmove) -> ET.Element:
         else:
             length = 14
         if length:
-            vline = _vertical(doc, length, xpos, ybot, col="black")
+            _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, xpos, texty, fontsize)
     # x from 4.0 to 10.0 in steps of 0.1
@@ -101,7 +105,7 @@ def addLL3scale(rl, rightmove) -> ET.Element:
         elif r % 10 == 0 and r < 700:
             length = 14
         if length:
-            vline = _vertical(doc, length, xpos, ybot, col="black")
+            _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, xpos, texty, fontsize)
     # x from 10.0 to 100.0 in steps of 1
@@ -130,7 +134,7 @@ def addLL3scale(rl, rightmove) -> ET.Element:
         elif r < 40:
             length = 14
         if length:
-            vline = _vertical(doc, length, xpos, ybot, col="black")
+            _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, xpos, texty, fontsize)
 
@@ -155,7 +159,7 @@ def addLL3scale(rl, rightmove) -> ET.Element:
             length = 14
 
         if length:
-            vline = _vertical(doc, length, xpos, ybot, col="black")
+            _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, textpos, texty, fontsize)
 
@@ -185,7 +189,7 @@ def addLL3scale(rl, rightmove) -> ET.Element:
             length = 14
 
         if length:
-            vline = _vertical(doc, length, xpos, ybot, col="black")
+            _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, textpos, texty, fontsize)
 
@@ -210,15 +214,9 @@ def addLL3scale(rl, rightmove) -> ET.Element:
         else:
             length = 14
         if length:
-            vline = _vertical(doc, length, xpos, ybot, col="black")
+            _vertical(doc, length, xpos, ybot, col="black")
         if textstr:
             _text(doc, textstr, textpos, texty, fontsize)
-
-
-
-
-
-
 
     return doc
 

@@ -3,8 +3,10 @@ import xml.etree.ElementTree as ET
 import math
 
 
-def _vertical(doc, length, xpos, ybot, col="black") -> dict:
-    """length is the length of the vertical line
+def _vertical(doc, length, xpos, ybot, col="black"):
+    """Creates a vertical line
+       doc is the scale element to which this line will be inserted
+       length is the length of the vertical line
        ybot is the ending y position
        xpos is the x position
        col is the colour of the line"""
@@ -14,6 +16,7 @@ def _vertical(doc, length, xpos, ybot, col="black") -> dict:
     ET.SubElement(doc, 'line', vline)
 
 def _text(doc, textstr, xpos, texty, fontsize):
+    "Adds text"
     if textstr:
         if len(textstr) == 1:
             textpos = round(xpos - 4)    #  textpos This is in pixels
@@ -22,8 +25,6 @@ def _text(doc, textstr, xpos, texty, fontsize):
         
         tel = ET.SubElement(doc, 'text', {"x":str(textpos), "y":str(texty),"fill":"black", "font-size":str(fontsize)})
         tel.text = textstr
-
-
 
 
 def addLL2scale(rl, rightmove) -> ET.Element:
