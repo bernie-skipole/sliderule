@@ -16,7 +16,7 @@ A typical image generated is
 
 These images were generated with the Python scripts and package under the 'imagemaker' directory. Inspection of those scripts will show how an image is created.
 
-The Python software is MIT licensed. The images are public domain, and as the software generates the images, new ones can be created at will from the Python program anyway.
+The Python software is MIT licensed. The images are public domain, and as the software generates the images, new ones can be created at will from the Python program.
 
 The Lyx and pdf document:
 
