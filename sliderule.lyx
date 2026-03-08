@@ -365,7 +365,7 @@ But we know
 \end_inset
 
 We are mapping the multiplication of two numbers to an addition!
- Which is the basis of how a slide rule works.
+ Which is the basis of how a Slide Rule works.
 \end_layout
 
 \begin_layout Standard
@@ -381,8 +381,8 @@ So how do we get logs and anti-logs?
  There are techniques such as power series that converge on the logarithm of a value,
  however for this article,
  we don't bother,
- a slide rule has logarithms built-in,
- the length along a slide rule is the 
+ a Slide Rule has logarithms built-in,
+ the length along a Slide Rule is the 
 \begin_inset Formula $log_{10}$
 \end_inset
 
@@ -809,7 +809,7 @@ It works the other way as well,
 \end_layout
 
 \begin_layout Standard
-The basis of a slide rule is that 
+The basis of a Slide Rule is that 
 \begin_inset Formula $x$
 \end_inset
 
@@ -840,6 +840,7 @@ To get every number inscribed would take an infinitely long ruler,
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename bigrule.svg
 	scale 50
@@ -857,37 +858,37 @@ You might notice there is a level of redundancy here,
 \end_layout
 
 \begin_layout Standard
-So slide rules can take advantage of this,
+So Slide Rules can take advantage of this,
  by just having the numbers 1 to 10 inscribed along the rule.
 \end_layout
 
 \begin_layout Standard
 There is a disadvantage;
- the slide rule can be used to add (or subtract) the Mantissa (the fractional part) of the logarithm,
+ the Slide Rule can be used to add (or subtract) the Mantissa (the fractional part) of the logarithm,
  and ignore the exponent (the units).
  This means that the result does not give the powers of ten information.
 \end_layout
 
 \begin_layout Standard
 So 9 x 7 may give 63,
- but the slide rule will not tell you if it is 6.3,
+ but the Slide Rule will not tell you if it is 6.3,
  or 63,
  or 630 etc.,
 \end_layout
 
 \begin_layout Standard
 And again for 90 x 7,
- the slide rule will not tell you if it is 6.3,
+ the Slide Rule will not tell you if it is 6.3,
  or 63,
  or 630 etc.,
 \end_layout
 
 \begin_layout Standard
-So to use a slide rule you also need to use the mark 1 brain to figure out where that decimal point lies.
+So to use a Slide Rule you also need to use the mark 1 brain to figure out where that decimal point lies.
 \end_layout
 
 \begin_layout Section
-Basic Slide rule usage
+Basic Slide Rule usage
 \end_layout
 
 \begin_layout Subsection
@@ -895,17 +896,18 @@ Multiplication
 \end_layout
 
 \begin_layout Standard
-To multiply two numbers using a slide rule,
- you add the two associated lengths together - the length of a slide rule being the log of the number.
+To multiply two numbers using a Slide Rule,
+ you add the two associated lengths together - the length of a Slide Rule being the log of the number.
  The two lengths together give another length (the log of the product),
  and from that resultant length you can just read off the result.
- So you need two slide rules,
+ So you need two Slide Rules,
  or,
  as I'm sure you know,
- the slide rule is made up of sliding parts.
+ the Slide Rule is made up of sliding parts.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename twoxthree.svg
 	scale 50
@@ -962,6 +964,7 @@ You may have spotted a problem with this.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename byseven.svg
 	scale 55
@@ -978,7 +981,7 @@ In this case the 10 of the C scale is positioned over the 7.
 \end_layout
 
 \begin_layout Standard
-As the slide rule is indifferent to powers of ten,
+As the Slide Rule is indifferent to powers of ten,
  we have to figure the result is actually 14.
 \end_layout
 
@@ -1048,7 +1051,7 @@ We know division maps to subtraction with logs.
 
 \end_inset
 
-So how to subtract distance on a slide rule?
+So how to subtract distance on a Slide Rule?
  Lets try six divided by four,
  which is 1.5
 \end_layout
@@ -1068,6 +1071,7 @@ The distance to 6 of the D scale is
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename sixdivfour.svg
 	scale 55
@@ -1109,6 +1113,7 @@ Again we have a problem,
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename sixdiveight.svg
 	scale 55
@@ -1186,6 +1191,7 @@ Most have the scales CF and DF,
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename df.svg
 	scale 60
@@ -1206,7 +1212,7 @@ Consider the multiplication of
 \end_inset
 
  which is annoying,
- especially if your mind is on a calculation rather than how to use a slide rule.
+ especially if your mind is on a calculation rather than how to use a Slide Rule.
 \end_layout
 
 \begin_layout Standard
@@ -1220,6 +1226,7 @@ Now look again at
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename twoxseven.svg
 	scale 50
@@ -1244,6 +1251,7 @@ But now we want to multiply 1.4 by three,
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename threexfourteen.svg
 	scale 55
@@ -1311,7 +1319,7 @@ The DF scale has another use,
 \end_layout
 
 \begin_layout Standard
-If you are reading this just to get a feel of how slide rules work you can probably stop now.
+If you are reading this just to get a feel of how Slide Rules work you can probably stop now.
  However there is a load of magic to come in getting powers and roots,
  so if this sort of old elegance amuses you,
  please read on.
@@ -1354,7 +1362,7 @@ I've used a variable
 \end_layout
 
 \begin_layout Standard
-Our slide rule uses 
+Our Slide Rule uses 
 \begin_inset Formula $\log_{10}$
 \end_inset
 
@@ -1371,7 +1379,7 @@ Our slide rule uses
 \end_layout
 
 \begin_layout Standard
-On our slide rule,
+On our Slide Rule,
  scale D has 
 \begin_inset Formula $x$
 \end_inset
@@ -1398,7 +1406,7 @@ If
 \end_inset
 
 ,
- then the distance along the slide rule would be 
+ then the distance along the Slide Rule would be 
 \begin_inset Formula $\log_{10}(\log_{b}y)$
 \end_inset
 
@@ -1581,6 +1589,7 @@ For now we'll only consider the one scale of
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename ll3.svg
 	scale 55
@@ -1812,9 +1821,10 @@ So the LL
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename onedottwosquared.svg
-	scale 55
+	scale 50
 
 \end_inset
 
@@ -1870,9 +1880,10 @@ However this still leaves us with the problem of getting the square root of 6,
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename ll2.svg
-	scale 55
+	scale 60
 
 \end_inset
 
@@ -1971,7 +1982,7 @@ to LL
 \end_layout
 
 \begin_layout Standard
-Most slide rules also have an LL
+Most Slide Rules also have an LL
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -2265,7 +2276,7 @@ It seems reasonable to think that for multiplication,
 \end_layout
 
 \begin_layout Standard
-Usually a slide rule will have further scales,
+Usually a Slide Rule will have further scales,
  of 
 \begin_inset Formula $e^{-x}$
 \end_inset
