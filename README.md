@@ -4,6 +4,10 @@ sliderule.pdf is an article describing the maths and usage of a sliderule.
 
 sliderule.lyx is the source document, which together with the svg images, generated the pdf file.
 
+A web version can be viewed at:
+
+https://bernie-skipole.github.io/sliderule/
+
 The article contains several illustrative sliderule scales.
 A typical image generated is
 
