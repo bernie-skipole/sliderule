@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta name="generator" content="LyX 2.4.0~RC3" />
+<title>The Slide Rule</title>
+<style>
+/* body and math styles added by Bernie */
+body {
+margin-left: 50px;
+margin-right: 50px;
+
+}
+math {
+margin-top:10px;
+margin-bottom:10px;
+
+}
+/* Layout-provided Styles */
+h1.title {
+font-size: x-large;
+margin-bottom: 1ex;
+text-align: center;
+
+}
+div.author {
+font-size: large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+h2.section {
+font-weight: bold;
+font-size: x-large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+div.standard {
+	margin-bottom: 2ex;
+}
+h3.subsection {
+font-weight: bold;
+font-size: large;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+ul.itemize {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+div.plain_layout {
+text-align: left;
+
+}
+div.bibliography {
+	margin-left: 2em;
+	text-indent: -2em;
+}
+span.bibitemlabel:before { content: "["; }
+span.bibitemlabel:after { content: "] "; }
+
+
+</style>
+</head>
+<body dir="auto">
+<h1 class='title' id='magicparlabel-1'>The Slide Rule</h1>
+<div class='author' id='magicparlabel-2'>Bernard Czenkusz</div>
+<section>
+<h2 class='section' id='magicparlabel-3'><span class="section_label">1</span> First the nitty gritty</h2>
+<div class='standard' id='magicparlabel-4'>To understand the action of a Slide Rule we have to start from Logarithms, or logs for short.</div>
+
+<div class='standard' id='magicparlabel-5'>Consider the two equations:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>y</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+<em>These say the same thing</em>, one gives <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ in terms of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ (and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+)
+<br />
+The other gets <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ in terms of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ (and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+).</div>
+
+<div class='standard' id='magicparlabel-6'>In this case <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ is called the base of the log.
+<br />
+So an example:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>8</mn>
+ <mo>=</mo>
+ <msup>
+  <mn>2</mn>
+  <mn>3</mn>
+ </msup>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>3</mn>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>2</mn>
+ </msub>
+ <mn>8</mn>
+</mrow>
+</math>
+To illustrate this, here&#8217;s a graph of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>2</mn>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+ against <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+.</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-7'><img style='width:60%;' src='e_398d4b7bbdea_loggraph.svg' alt='image: e_398d4b7bbdea_loggraph.svg' /></div>
+
+<div class='standard' id='magicparlabel-8'>A point to notice is that no negative <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ values are plotted. Logarithms are not defined for negative <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+, but the logs themselves do take negative values as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ becomes less than 1.0
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>0.5</mn>
+ <mo>=</mo>
+ <msup>
+  <mn>2</mn>
+  <mrow>
+   <mo>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>-</mo>
+ <mn>1</mn>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>2</mn>
+ </msub>
+ <mn>0.5</mn>
+</mrow>
+</math>
+</div>
+<section>
+<h3 class='subsection' id='magicparlabel-9'><span class="subsection_label">1.1</span> The heart of the matter</h3>
+<div class='standard' id='magicparlabel-10'>Given <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+ we have an identity we are going to use later:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>y</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>b</mi>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+Here&#8217;s the magic, take two numbers <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>p</mi>
+ </msup>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>q</mi>
+ </msup>
+</mrow>
+</math>
+, so therefore:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>p</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>c</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>q</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>d</mi>
+</mrow>
+</math>
+We know
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>c</mi>
+ <mi>d</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>p</mi>
+ </msup>
+ <msup>
+  <mi>b</mi>
+  <mi>q</mi>
+ </msup>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mrow>
+   <mi>p</mi>
+   <mo>+</mo>
+   <mi>q</mi>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+To illustrate:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>8</mn>
+ <mo>&#x00D7;</mo>
+ <mn>4</mn>
+ <mo>=</mo>
+ <msup>
+  <mn>2</mn>
+  <mn>3</mn>
+ </msup>
+ <mo>&#x00D7;</mo>
+ <msup>
+  <mn>2</mn>
+  <mn>2</mn>
+ </msup>
+ <mo>=</mo>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>2</mn>
+ <mo>=</mo>
+ <msup>
+  <mn>2</mn>
+  <mn>5</mn>
+ </msup>
+ <mo>=</mo>
+ <mn>32</mn>
+</mrow>
+</math>
+Taking the log of both sides, and noting that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>b</mi>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>c</mi>
+ <mi>d</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>b</mi>
+  <mi>p</mi>
+ </msup>
+ <msup>
+  <mi>b</mi>
+  <mi>q</mi>
+ </msup>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>b</mi>
+  <mrow>
+   <mi>p</mi>
+   <mo>+</mo>
+   <mi>q</mi>
+  </mrow>
+ </msup>
+ <mo>=</mo>
+ <mi>p</mi>
+ <mo>+</mo>
+ <mi>q</mi>
+</mrow>
+</math>
+But we know <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>p</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>c</mi>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>q</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>d</mi>
+</mrow>
+</math>
+ so lets go all the way
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>c</mi>
+ <mi>d</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>c</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>d</mi>
+</mrow>
+</math>
+We are mapping the multiplication of two numbers to an addition! Which is the basis of how a Slide Rule works.</div>
+
+<div class='standard' id='magicparlabel-11'>The problem seems to be twofold, we need to find the logs of any two numbers, and after adding them, we get the log of their product - so we need to get back to the desired product from its log - that is, we need to get the anti-log.</div>
+
+<div class='standard' id='magicparlabel-12'>So how do we get logs and anti-logs? There are techniques such as power series that converge on the logarithm of a value, however for this article, we don&#8217;t bother, a Slide Rule has logarithms built-in, the length along a Slide Rule is the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>o</mi>
+ <msub>
+  <mi>g</mi>
+  <mn>10</mn>
+ </msub>
+</mrow>
+</math>
+ of the number inscribed on the rule. More of this later.</div>
+
+<div class='standard' id='magicparlabel-13'>As a school child, everyone over a certain age had a booklet of &#8217;Logarithmic Tables&#8217; which also included anti-log and trigonometric &#8217;four-figure&#8217; tables. Ask your granddad. </div>
+
+<div class='standard' id='magicparlabel-14'>To continue, how about division:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <mi>c</mi>
+  <mi>d</mi>
+ </mfrac>
+ <mo>=</mo>
+ <mfrac>
+  <msup>
+   <mi>b</mi>
+   <mi>p</mi>
+  </msup>
+  <msup>
+   <mi>b</mi>
+   <mi>q</mi>
+  </msup>
+ </mfrac>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>p</mi>
+ </msup>
+ <msup>
+  <mi>b</mi>
+  <mrow>
+   <mo>-</mo>
+   <mi>q</mi>
+  </mrow>
+ </msup>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mrow>
+   <mi>p</mi>
+   <mo>-</mo>
+   <mi>q</mi>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+And that leads to
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mfrac>
+  <mi>c</mi>
+  <mi>d</mi>
+ </mfrac>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>b</mi>
+  <mrow>
+   <mi>p</mi>
+   <mo>-</mo>
+   <mi>q</mi>
+  </mrow>
+ </msup>
+ <mo>=</mo>
+ <mi>p</mi>
+ <mo>-</mo>
+ <mi>q</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>c</mi>
+ <mo>-</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>d</mi>
+</mrow>
+</math>
+So division maps to subtraction, that&#8217;s neat.</div>
+
+<div class='standard' id='magicparlabel-15'>Now let&#8217;s look at another sweet property. Starting again from:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>x</mi>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mrow>
+   <mi>n</mi>
+   <mi>y</mi>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+Take the log of both sides:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>x</mi>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>b</mi>
+  <mrow>
+   <mi>n</mi>
+   <mi>y</mi>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>x</mi>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <mi>n</mi>
+ <mi>y</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>x</mi>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <mi>n</mi>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+We&#8217;ve reduced finding a power to a multiplication! The schoolboy would have to look up the log of a number <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+, do the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ multiplication, and then look up the anti-log to get the final result <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>x</mi>
+ <mi>n</mi>
+</msup>
+</math>
+, and that&#8217;s a powerful technique. As n can be fractional, this includes roots as well.</div>
+
+<div class='standard' id='magicparlabel-16'>And if we really want to push the boat out, we can do that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ multiplication with logs:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <msup>
+    <mi>x</mi>
+    <mi>n</mi>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>x</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mi>n</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>x</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+I&#8217;ve introduced another base <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ here, just to show that the multiplication is not necessarily in base <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ again.<br /></div>
+
+<div class='standard' id='magicparlabel-17'>So there&#8217;s a few things to notice:</div>
+<ul class='lyxitem lyxitemi' id='magicparlabel-18'>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mn>1</mn>
+ <mo>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ for any base, since <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>b</mi>
+  <mn>0</mn>
+ </msup>
+ <mo>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>b</mi>
+ <mo>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ for any base, since <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>b</mi>
+  <mn>1</mn>
+ </msup>
+ <mo>=</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>x</mi>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <mi>n</mi>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mfrac>
+   <mn>1</mn>
+   <mi>x</mi>
+  </mfrac>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+=-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+</li>
+</ul>
+<div class='standard' id='magicparlabel-22'>If you check the earlier graph, its worth spotting these points in action. For further information about logarithms, a good description is given at [<a href='#LyXCite-wikipedia'><span class="bib-numericallabel">1</span></a>]</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-23'><span class="subsection_label">1.2</span> All about bases</h3>
+<div class='standard' id='magicparlabel-24'>Let&#8217;s dive a bit deeper into that base number <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+, especially with respect to Slide Rules. First we&#8217;ll show that changing bases is surprisingly easy.</div>
+
+<div class='standard' id='magicparlabel-25'>Starting from these two again:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>y</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>b</mi>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+Take the log (with base <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>c</mi>
+</math>
+) of both sides
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>c</mi>
+ </msub>
+ <mi>x</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>c</mi>
+ </msub>
+ <msup>
+  <mi>b</mi>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>c</mi>
+ </msub>
+ <mi>x</mi>
+ <mo>=</mo>
+ <mi>y</mi>
+ <msub>
+  <mo>log</mo>
+  <mi>c</mi>
+ </msub>
+ <mi>b</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>c</mi>
+   </msub>
+   <mi>x</mi>
+  </mrow>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>c</mi>
+   </msub>
+   <mi>b</mi>
+  </mrow>
+ </mfrac>
+ <mo>=</mo>
+ <mi>y</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>c</mi>
+   </msub>
+   <mi>x</mi>
+  </mrow>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>c</mi>
+   </msub>
+   <mi>b</mi>
+  </mrow>
+ </mfrac>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+So if someone has kindly created a table of logarithms to base <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>c</mi>
+</math>
+, then creating a new table of logarithms to base <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ is simply a matter of dividing each value in the table by a constant <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>c</mi>
+ </msub>
+ <mi>b</mi>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-26'>Logs to base e, the exponential constant, are used all over the place by physicists and mathematicians. However the base we are particularly interested in is base 10, and we&#8217;ll now explore why. From the previous section we now use 10 instead of b:</div>
+<ul class='lyxitem lyxitemi' id='magicparlabel-27'>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mi>y</mi>
+ </msup>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>y</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>1</mn>
+ <mo>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>10</mn>
+ <mo>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <msup>
+  <mi>x</mi>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <mi>n</mi>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+</li>
+<li class="itemize_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <mi>n</mi>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>10</mn>
+ <mo>=</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+</li>
+</ul>
+<div class='standard' id='magicparlabel-33'>I&#8217;ll just use <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>log</mo>
+</math>
+ from now on, rather than <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mo>log</mo>
+ <mn>10</mn>
+</msub>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-34'>We see that the values <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>10</mn>
+</mrow>
+</math>
+ will span the range 0 to 1.</div>
+
+<div class='standard' id='magicparlabel-35'>Or put another way, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo>=</mo>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mn>0</mn>
+ </msup>
+</mrow>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>10</mn>
+ <mo>=</mo>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mn>1</mn>
+ </msup>
+</mrow>
+</math>
+ and an intermediate value <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>5</mn>
+ <mo>=</mo>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mn>0.7</mn>
+ </msup>
+</mrow>
+</math>
+(approx).</div>
+
+<div class='standard' id='magicparlabel-36'>Given an <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ value in this range of 1 to 10:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>0</mn>
+ <mo>&#x2266;</mo>
+ <mo>log</mo>
+ <mi>x</mi>
+ <mo>&#x2266;</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+So what about <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>10</mn>
+ <mi>x</mi>
+</mrow>
+</math>
+?
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>log</mo>
+ <mn>10</mn>
+ <mi>x</mi>
+ <mo>=</mo>
+ <mo>log</mo>
+ <mn>10</mn>
+ <mo>+</mo>
+ <mo>log</mo>
+ <mi>x</mi>
+ <mo>=</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mo>log</mo>
+ <mi>x</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>1</mn>
+ <mo>&#x2266;</mo>
+ <mo>log</mo>
+ <mn>10</mn>
+ <mi>x</mi>
+ <mo>&#x2266;</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+and it follows
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>3</mn>
+ <mo>&#x2266;</mo>
+ <mo>log</mo>
+ <mn>100</mn>
+ <mi>x</mi>
+ <mo>&#x2266;</mo>
+ <mn>4</mn>
+</mrow>
+</math>
+So in general, if you have calculated the logs of all values between 1 and 10, by simply adding unit values you get all logs for any number greater than 1</div>
+
+<div class='standard' id='magicparlabel-37'>The logs of the numbers 10 to 100 are simply one added to the logs of the numbers 1 to 10.</div>
+
+<div class='standard' id='magicparlabel-38'>The logs of the numbers 100 to 1000 are simply two added to the logs of the numbers 1 to 10.</div>
+
+<div class='standard' id='magicparlabel-39'>It works the other way as well, the logarithms of 0.1 to 1 are one subtracted from the logarithms of the numbers 1 to 10.</div>
+
+<div class='standard' id='magicparlabel-40'>The basis of a Slide Rule is that <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ values are inscribed, with the distance from the left of the rule to each point being the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mi>x</mi>
+</mrow>
+</math>
+.</div>
+
+<div class='standard' id='magicparlabel-41'>The <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ numbers shown on the rule are therefore the antilogs of the distance along the rule.</div>
+
+<div class='standard' id='magicparlabel-42'>To get every number inscribed would take an infinitely long ruler, which could be unwieldy. Below is an image of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ values from 1.0 to 1000.0</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-43'><img style='width:80%;' src='e_94a79e3be511_bigrule.svg' alt='image: e_94a79e3be511_bigrule.svg' /></div>
+
+<div class='standard' id='magicparlabel-44'>You might notice there is a level of redundancy here, values from 10.0 to 100.0 do not give any extra information, other than the power of 10, and similarly 100.0 to 1000.0 is just another repeat.</div>
+
+<div class='standard' id='magicparlabel-45'>So Slide Rules can take advantage of this, by just having the numbers 1 to 10 inscribed along the rule.</div>
+
+<div class='standard' id='magicparlabel-46'>There is a disadvantage; the Slide Rule can be used to add (or subtract) the Mantissa (the fractional part) of the logarithm, and ignore the exponent (the units). This means that the result does not give the powers of ten information.</div>
+
+<div class='standard' id='magicparlabel-47'>So 9 x 7 may give 63, but the Slide Rule will not tell you if it is 6.3, or 63, or 630 etc.,</div>
+
+<div class='standard' id='magicparlabel-48'>And again for 90 x 7, the Slide Rule will not tell you if it is 6.3, or 63, or 630 etc.,</div>
+
+<div class='standard' id='magicparlabel-49'>So to use a Slide Rule you also need to use the mark 1 brain to figure out where that decimal point lies.</div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-50'><span class="section_label">2</span> Basic Slide Rule usage</h2>
+<section>
+<h3 class='subsection' id='magicparlabel-51'><span class="subsection_label">2.1</span> Multiplication</h3>
+<div class='standard' id='magicparlabel-52'>To multiply two numbers using a Slide Rule, you add the two associated lengths together - the length of a Slide Rule being the log of the number. The two lengths together give another length (the log of the product), and from that resultant length you can just read off the result. So you need two Slide Rules, or, as I&#8217;m sure you know, the Slide Rule is made up of sliding parts.</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-53'><img style='width:80%;' src='e_e3d7e1674571_twoxthree.svg' alt='image: e_e3d7e1674571_twoxthree.svg' /></div>
+
+<div class='standard' id='magicparlabel-54'>By aligning the 1 of scale C (often called the index) above the 2 of scale D, we have added the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ distance to scale C.</div>
+
+<div class='standard' id='magicparlabel-55'>Remember that though we have put a &#8217;1&#8217; over the 2, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>1</mn>
+ <mo>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, and so in terms of the lengths, this is putting a zero over the 2 position.</div>
+
+<div class='standard' id='magicparlabel-56'>By moving along C to any number, say 3, we have added the log of 3. Then reading down onto scale D - which is now the length of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>2</mn>
+ <mo>+</mo>
+ <mo>log</mo>
+ <mn>3</mn>
+ <mo>,</mo>
+</mrow>
+</math>
+we can see the value of the product, which in this case is 6.</div>
+
+<div class='standard' id='magicparlabel-57'>You would do the same thing if you were multiplying 20 by 30. As discussed previously, it is up to you to work out the decimal place. </div>
+
+<div class='standard' id='magicparlabel-58'>You may have spotted a problem with this. What if we wanted 2x7? The 7 on the C scale is beyond the end of the D scale. So here&#8217;s another magic trick:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-59'><img style='width:80%;' src='e_756cd3ca04da_byseven.svg' alt='image: e_756cd3ca04da_byseven.svg' /></div>
+
+<div class='standard' id='magicparlabel-60'>In this case the 10 of the C scale is positioned over the 7. Then move to the 2 of the C scale, and below it you can see the result 1.4</div>
+
+<div class='standard' id='magicparlabel-61'>As the Slide Rule is indifferent to powers of ten, we have to figure the result is actually 14.</div>
+
+<div class='standard' id='magicparlabel-62'>So how are the logarithms being added in this method?</div>
+
+<div class='standard' id='magicparlabel-63'>By setting the 10 on to 7, we have the length of the D scale, which is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>7</mn>
+</mrow>
+</math>
+, but then traveling left on the C, from 10 right back to 1, we have subtracted <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>10</mn>
+</mrow>
+</math>
+. Then traveling right on the C from 1 to 2, we have added <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+. So we have actually done:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>log</mo>
+ <mn>7</mn>
+ <mo>-</mo>
+ <mo>log</mo>
+ <mn>10</mn>
+ <mo>+</mo>
+ <mo>log</mo>
+ <mn>2</mn>
+ <mo>=</mo>
+ <mo>log</mo>
+ <mfrac>
+  <mrow>
+   <mn>7</mn>
+   <mo>&#x00D7;</mo>
+   <mn>2</mn>
+  </mrow>
+  <mn>10</mn>
+ </mfrac>
+</mrow>
+</math>
+By moving the C scale left we are dividing by 10, but we know not to worry about this, and so we have the significant digits of the result.</div>
+
+<div class='standard' id='magicparlabel-64'>In practice, the usage is simple; put either the 1 or the 10 of the sliding C scale over one number, go to the other number on the sliding scale, and read the result on the D scale.</div>
+
+<div class='standard' id='magicparlabel-65'>Earlier we mentioned &#8217;9 x 7 may give 63&#8217;, just for fun, on the scale above, you can see the 9 on C is above 6.3 on D.</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-66'><span class="subsection_label">2.2</span> Division</h3>
+<div class='standard' id='magicparlabel-67'>We know division maps to subtraction with logs.
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>log</mo>
+ <mfrac>
+  <mi>c</mi>
+  <mi>d</mi>
+ </mfrac>
+ <mo>=</mo>
+ <mo>log</mo>
+ <mi>c</mi>
+ <mo>-</mo>
+ <mo>log</mo>
+ <mi>d</mi>
+</mrow>
+</math>
+So how to subtract distance on a Slide Rule? Lets try six divided by four, which is 1.5</div>
+
+<div class='standard' id='magicparlabel-68'>The distance to 6 of the D scale is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>6</mn>
+</mrow>
+</math>
+, move the 4 of the C scale above it, and traveling back along the C scale to the 1 is equivalent to subtracting <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>4</mn>
+</mrow>
+</math>
+.</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-69'><img style='width:80%;' src='e_b1fa15a463d0_sixdivfour.svg' alt='image: e_b1fa15a463d0_sixdivfour.svg' /></div>
+
+<div class='standard' id='magicparlabel-70'>So the distance on the D scale is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>6</mn>
+ <mo>-</mo>
+ <mo>log</mo>
+ <mn>4</mn>
+ <mo>=</mo>
+ <mo>log</mo>
+ <mn>1.5</mn>
+</mrow>
+</math>
+ and by reading the inscribed value, which is the equivalent of reading the antilog, we find 1.5.</div>
+
+<div class='standard' id='magicparlabel-71'>Notice, though we see division as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>6</mn>
+ <mn>4</mn>
+</mfrac>
+</math>
+ the 6 is on the bottom scale, and the four is above it, which is just due to the layout of these sliding scales.</div>
+
+<div class='standard' id='magicparlabel-72'>Again we have a problem, what about <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>6</mn>
+ <mn>8</mn>
+</mfrac>
+</math>
+ ? Moving the 8 above the 6 leaves the 1 on the C scale beyond the D scale.</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-73'><img style='width:80%;' src='e_88f38d05a5b2_sixdiveight.svg' alt='image: e_88f38d05a5b2_sixdiveight.svg' /></div>
+
+<div class='standard' id='magicparlabel-74'>However the 10 on C scale shows 7.5 on D, and 0.75 is the right answer, so how does that come about?</div>
+
+<div class='standard' id='magicparlabel-75'>6 on the D scale is equivalent to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>6</mn>
+</mrow>
+</math>
+, subtracting <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>8</mn>
+</mrow>
+</math>
+ takes you leftwards to C1, then adding <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>10</mn>
+</mrow>
+</math>
+ takes you to C10.
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>log</mo>
+ <mn>6</mn>
+ <mo>-</mo>
+ <mo>log</mo>
+ <mn>8</mn>
+ <mo>+</mo>
+ <mo>log</mo>
+ <mn>10</mn>
+ <mo>=</mo>
+ <mo>log</mo>
+ <mfrac>
+  <mrow>
+   <mn>6</mn>
+   <mo>&#x00D7;</mo>
+   <mn>10</mn>
+  </mrow>
+  <mn>8</mn>
+ </mfrac>
+</mrow>
+</math>
+Powers of ten do not bother us, so reading the antilog on the D scale gives us 7.5, which we realize means 0.75</div>
+
+<div class='standard' id='magicparlabel-76'>We can be confident that setting a C index, of 1 or 10 over a number and then moving along C is multiplication, and setting a C number over a D number, then moving along C to an index, 1 or 10, gives us a division.</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-77'><span class="subsection_label">2.3</span> CF and DF</h3>
+<div class='standard' id='magicparlabel-78'>Another twist to the tale of multiplication. Depending on the model, some Slide Rules have a selection of different scales on both sides which are often useful.</div>
+
+<div class='standard' id='magicparlabel-79'>Most have the scales CF and DF, which are the same as C and D but &#8217;Folded&#8217;, by the scales being offset by <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <mi>&#x3C0;</mi>
+</mrow>
+</math>
+, and, at what we would consider the 10 point, is labeled as 1. A lone DF shown below:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-80'><img style='width:80%;' src='e_fae190638fe7_df.svg' alt='image: e_fae190638fe7_df.svg' /></div>
+
+<div class='standard' id='magicparlabel-81'>Consider the multiplication of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>7</mn>
+ <mo>&#x00D7;</mo>
+ <mn>3</mn>
+</mrow>
+</math>
+, using the C10 index we have to change the order to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>7</mn>
+ <mo>&#x00D7;</mo>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>3</mn>
+</mrow>
+</math>
+ which is annoying, especially if your mind is on a calculation rather than how to use a Slide Rule.</div>
+
+<div class='standard' id='magicparlabel-82'>Now look again at <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>7</mn>
+</mrow>
+</math>
+, but using the C1 index, and with a Slide Rule that has CF and DF scales:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-83'><img style='width:80%;' src='e_a6c2882b88a7_twoxseven.svg' alt='image: e_a6c2882b88a7_twoxseven.svg' /></div>
+
+<div class='standard' id='magicparlabel-84'>With C1 over D2, the C7 is off to the right, but the CF7 is there, and reading on to the DF scale we can see the answer 1.4 (14).</div>
+
+<div class='standard' id='magicparlabel-85'>But now we want to multiply 1.4 by three, if we move the CF1 index under that DF1.4, we find CF3 is off to the right. </div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-86'><img style='width:80%;' src='e_32776dc6018c_threexfourteen.svg' alt='image: e_32776dc6018c_threexfourteen.svg' /></div>
+
+<div class='standard' id='magicparlabel-87'>But that&#8217;s still ok, as we can see C3, which is over 4.2 (42), which is the correct answer, we have <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>7</mn>
+ <mo>&#x00D7;</mo>
+ <mn>3</mn>
+</mrow>
+</math>
+, by swapping across the scales.</div>
+
+<div class='standard' id='magicparlabel-88'>This works because a movement of the central slider, by <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ in our initial move, is by a distance of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ for both the C and CF scales, and so is multiplying by 2 on both scales, and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mo>&#x00D7;</mo>
+ <mn>7</mn>
+</mrow>
+</math>
+ works on CF and DF just fine.</div>
+
+<div class='standard' id='magicparlabel-89'>The DF scale has another use, as its starting point of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ is fixed directly over the D value of 1, we can get multiples of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ by adding log distances just by moving along the D scale. Using the hairline slider over D6 we can view <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>6</mn>
+ <mo>&#x00D7;</mo>
+ <mi>&#x3C0;</mi>
+ <mo>=</mo>
+ <mn>18.8</mn>
+</mrow>
+</math>
+ approx by reading it from the DF scale. (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>log</mo>
+ <mi>&#x3C0;</mi>
+ <mo>+</mo>
+ <mo>log</mo>
+ <mn>6</mn>
+</mrow>
+</math>
+).</div>
+
+<div class='standard' id='magicparlabel-90'>If you are reading this just to get a feel of how Slide Rules work you can probably stop now. However there is a load of magic to come in getting powers and roots, so if this sort of old elegance amuses you, please read on.</div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-91'><span class="section_label">3</span> Powers</h2>
+<div class='standard' id='magicparlabel-92'>Going right back to the section describing logs, we had the result:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <msup>
+  <mi>y</mi>
+  <mi>n</mi>
+ </msup>
+ <mo>=</mo>
+ <mi>n</mi>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>y</mi>
+</mrow>
+</math>
+I&#8217;ve used a variable <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ here, to avoid over-use of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+, and, taking logs of both sides:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <msup>
+    <mi>y</mi>
+    <mi>n</mi>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mi>n</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-93'>Our Slide Rule uses <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mo>log</mo>
+ <mn>10</mn>
+</msub>
+</math>
+ to multiply two numbers, so this becomes:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <msup>
+    <mi>y</mi>
+    <mi>n</mi>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-94'>On our Slide Rule, scale D has <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ inscribed, with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>x</mi>
+</mrow>
+</math>
+ as the distance to the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ value.</div>
+
+<div class='standard' id='magicparlabel-95'>If <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ itself was the logarithm (to base b) of another number <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+, then the distance along the Slide Rule would be <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+ which is what we need, and gives us a good chance of calculating <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>y</mi>
+ <mi>n</mi>
+</msup>
+</math>
+. So we want another scale, with <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ inscribed, mapping to the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ values, such that:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mi>y</mi>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-96'>Or in other words a scale of:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<msup>
+ <mi>b</mi>
+ <mi>x</mi>
+</msup>
+</math>
+So there&#8217;s a question of how to choose the base <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+, and there is also an elephant in the room; up to now we have been pretty glib about powers of ten, we can take them or leave them. Alas no longer:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mn>2</mn>
+  <mn>0.3</mn>
+ </msup>
+ <mo>=</mo>
+ <mn>1.2311...</mn>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mn>2</mn>
+  <mn>3</mn>
+ </msup>
+ <mo>=</mo>
+ <mn>8</mn>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mn>2</mn>
+  <mn>30</mn>
+ </msup>
+ <mo>=</mo>
+ <mn>1073741824</mn>
+</mrow>
+</math>
+Both magnitudes and significant digits are all over the place.</div>
+
+<div class='standard' id='magicparlabel-97'>What we do know, is that our D scale has 1.0 at the left end, and 10.0 at the right.</div>
+
+<div class='standard' id='magicparlabel-98'>So the left value of our scale <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>b</mi>
+ <mi>x</mi>
+</msup>
+</math>
+ will be <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ and the right hand will be <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>b</mi>
+ <mn>10</mn>
+</msup>
+</math>
+.</div>
+
+<div class='standard' id='magicparlabel-99'>The base of 10 is not very good, it does not have any numbers 1 to 9 on it as it starts at 10, and its maximum value of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mn>10</mn>
+ </msup>
+</mrow>
+</math>
+ is only of use to astronomers.</div>
+
+<div class='standard' id='magicparlabel-100'>A very common convention, used on most models is to use e, 2.71828... as the base. So the left hand value is 2.718.. and the right hand is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mn>10</mn>
+</msup>
+</math>
+ which is approximately 22026.46, which covers a reasonably practical range of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ values.</div>
+
+<div class='standard' id='magicparlabel-101'>This has the added facility of an immediate conversion using the hairline slider, from <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ on the D scale to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mi>x</mi>
+</msup>
+</math>
+on our new scale, and also from the <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ value on our new scale to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>ln</mo>
+ <mi>y</mi>
+</mrow>
+</math>
+ on the D scale.</div>
+
+<div class='standard' id='magicparlabel-102'>I&#8217;ll give due warning; we need more than one scale to handle the fact that powers of 10 are significant, usually there are three for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ values greater than 1, and three more for <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ values less than 1, so that&#8217;s six new scales!</div>
+
+<div class='standard' id='magicparlabel-103'>For now we&#8217;ll only consider the one scale of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mi>x</mi>
+</msup>
+</math>
+ for the range of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ values on the D scale. Here&#8217;s an illustration, getting <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mn>4</mn>
+ <mn>3</mn>
+</msup>
+</math>
+ which is 64:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-104'><img style='width:80%;' src='e_fbd2c36c3895_ll3.svg' alt='image: e_fbd2c36c3895_ll3.svg' /></div>
+
+<div class='standard' id='magicparlabel-105'>The 1 of scale C is placed over the 4 of scale LL<sub class='script_subscript'>3</sub> (using the hairline), then the hairline is moved to C3 and the result, 64 is read on the LL<sub class='script_subscript'>3</sub> scale.</div>
+
+<div class='standard' id='magicparlabel-114'>The breakdown of what is happening:</div>
+
+<div class='standard' id='magicparlabel-115'>The 4 of the LL<sub class='script_subscript'>3</sub> scale maps directly to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>e</mi>
+ </msub>
+ <mn>4</mn>
+</mrow>
+</math>
+ which is 1.386... on D, then using the C scale to multiply by 3, as we have done before, gives us 4.16.. on D, and this is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>e</mi>
+ </msub>
+ <mn>64</mn>
+</mrow>
+</math>
+ so we can read 64 directly on the LL<sub class='script_subscript'>3</sub> scale.</div>
+
+<div class='standard' id='magicparlabel-124'>You can also see, just by eye, that the 2 on the C scale lines up with 16 on LL<sub class='script_subscript'>3</sub>, showing <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mn>4</mn>
+ <mn>2</mn>
+</msup>
+</math>
+ is sixteen.</div>
+
+<div class='standard' id='magicparlabel-129'>The alignment above also shows how roots are taken, the C3 above LL<sub class='script_subscript'>3</sub>64 is a division, and moving to C1 gets the cubed root on the LL<sub class='script_subscript'>3</sub> scale which is 4.</div>
+
+<div class='standard' id='magicparlabel-138'>However if we are interested in results which gives us much larger numbers we are running out of luck, the biggest number shown above is 20000, and the resolution of the scale at that end is fairly poor.</div>
+
+<div class='standard' id='magicparlabel-139'>You will also see that the starting value of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>e</mi>
+</math>
+ on LL<sub class='script_subscript'>3</sub> does not allow powers of smaller numbers, and for example taking the square root of 6, which is 2.45.. is problematic, moving C2 over LL<sub class='script_subscript'>3</sub>6 leaves C1 hanging out on the left.</div>
+
+<div class='standard' id='magicparlabel-148'>The answer is to add another scale, which is the equivalent of the scale to the left of LL<sub class='script_subscript'>3</sub>.</div>
+
+<div class='standard' id='magicparlabel-153'>Remembering that D is from 1 to 10, and if there was a scale to the left of D, it would be from 0.1 to 1. (Those powers of 10!)</div>
+
+<div class='standard' id='magicparlabel-154'>Therefore the left-of-LL<sub class='script_subscript'>3</sub> is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mn>0.1</mn>
+</msup>
+</math>
+ (1.105...) to <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>e</mi>
+</math>
+ (2.718...) and is usually labeled LL<sub class='script_subscript'>2</sub></div>
+
+<div class='standard' id='magicparlabel-163'>So the LL<sub class='script_subscript'>2</sub> scale of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mrow>
+  <mn>0.1</mn>
+  <mi>x</mi>
+ </mrow>
+</msup>
+</math>
+ is the equivalent of adding a scale <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>b</mi>
+ <mi>x</mi>
+</msup>
+</math>
+ with the base b of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mn>0.1</mn>
+</msup>
+</math>
+, here&#8217;s an illustration:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-168'><img style='width:80%;' src='e_4a158399868b_onedottwosquared.svg' alt='image: e_4a158399868b_onedottwosquared.svg' /></div>
+
+<div class='standard' id='magicparlabel-169'>The above shows how the square of 1.2 is obtained, the C1 index is placed over LL<sub class='script_subscript'>2</sub> 1.2, the hairline would be used to help with this. The square is then found by placing the hairline over C2 and reading the result on LL<sub class='script_subscript'>2</sub> of 1.44</div>
+
+<div class='standard' id='magicparlabel-178'>However this still leaves us with the problem of getting the square root of 6, which is an action that spans both LL<sub class='script_subscript'>3</sub> and LL<sub class='script_subscript'>2</sub> so here&#8217;s how its done:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-187'><img style='width:80%;' src='e_bd84913bacbf_ll2.svg' alt='image: e_bd84913bacbf_ll2.svg' /></div>
+
+<div class='standard' id='magicparlabel-188'>To obtain the square root of 6, we have placed C2 over LL<sub class='script_subscript'>3</sub>6, and our C1 index has been left hanging over to the left. When this happens we are used to just using the C10 index instead. So on the rule above the hairline has been placed over C10.</div>
+
+<div class='standard' id='magicparlabel-193'>In normal multiplication this only leaves us a factor of 10 out, but in this case LL<sub class='script_subscript'>3</sub> is showing a value around 8000, which is clearly wrong. However we see that the hairline is over LL<sub class='script_subscript'>2</sub> 2.45, which is pretty close to the actual value of 2.449...</div>
+
+<div class='standard' id='magicparlabel-202'>So here&#8217;s the rules:</div>
+
+<div class='standard' id='magicparlabel-203'>If you can use the C1 index and read your power and root values on one LL scale, then life is easy.</div>
+
+<div class='standard' id='magicparlabel-204'>If you move the C scale left and have to use the C10 index for a root, you go down an LL scale - you are getting a smaller number.</div>
+
+<div class='standard' id='magicparlabel-205'>On the other hand if you are getting a power, (for example 2.45<sup class='script_superscript'>2</sup> ) and have to use the C10 index, you go up a scale - from LL<sub class='script_subscript'>2 </sub>to LL<sub class='script_subscript'>3</sub>6 in the above illustration, as you are getting a bigger number.</div>
+
+<div class='standard' id='magicparlabel-218'>Most Slide Rules also have an LL<sub class='script_subscript'>1</sub> scale as well, and some have an LL<sub class='script_subscript'>0</sub> scale - getting ever closer to 1, but not quite getting there.</div>
+<section>
+<h3 class='subsection' id='magicparlabel-227'><span class="subsection_label">3.1</span> Why that worked</h3>
+<div class='standard' id='magicparlabel-228'>So that&#8217;s how it works, now a bit more on why. Back to:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <msup>
+    <mi>y</mi>
+    <mi>n</mi>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-229'>Another nice result, if n is a number such as <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>1</mn>
+ <mn>2</mn>
+</mfrac>
+</math>
+ for a square root, the above becomes:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <msup>
+    <mi>y</mi>
+    <mfrac>
+     <mn>1</mn>
+     <mi>n</mi>
+    </mfrac>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mfrac>
+  <mn>1</mn>
+  <mi>n</mi>
+ </mfrac>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <msup>
+    <mi>y</mi>
+    <mfrac>
+     <mn>1</mn>
+     <mi>n</mi>
+    </mfrac>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>1</mn>
+ <mo>-</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-230'>But <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>1</mn>
+</mrow>
+</math>
+ is just zero.
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <msup>
+    <mi>y</mi>
+    <mfrac>
+     <mn>1</mn>
+     <mi>n</mi>
+    </mfrac>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <mo>-</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-231'>So raising to a power is adding logs, and getting a root is subtracting logs.</div>
+
+<div class='standard' id='magicparlabel-232'>On our illustration above, the LL<sub class='script_subscript'>3</sub>6 value is directly under D 1.792.. which is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>e</mi>
+ </msub>
+ <mn>6</mn>
+</mrow>
+</math>
+. The distance along the ruler from D1 to this value is <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mn>6</mn>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+, and as we are looking for a square root we are subtracting <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>2</mn>
+</mrow>
+</math>
+ . If we were looking for the square of 6 we would be adding <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>2</mn>
+</mrow>
+</math>
+.</div>
+
+<div class='standard' id='magicparlabel-237'>To subtract <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>2</mn>
+</mrow>
+</math>
+ we normally place C2 above LL<sub class='script_subscript'>3</sub>6 and go to the left to C1, and the job is done, but in this case we need to use C10, so we are actually adding a further <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>10</mn>
+</mrow>
+</math>
+, and doing:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>-</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+ <mo>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>10</mn>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-242'>But we cannot ignore powers of 10, and that value is too big by the addition of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mn>10</mn>
+</mrow>
+</math>
+, we are actually getting:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <mn>10</mn>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mi>y</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>-</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <msup>
+    <mi>y</mi>
+    <mn>10</mn>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>-</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-243'>Putting y=6 and n=2 into this, gives us the square root of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mn>6</mn>
+ <mn>10</mn>
+</msup>
+</math>
+, which is 7776, and we have seen that on the LL<sub class='script_subscript'>3</sub> scale. Hence we need another scale:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>z</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>y</mi>
+  <mn>0.1</mn>
+ </msup>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-248'>So we are back to:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>log</mo>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <mi>z</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>-</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mi>n</mi>
+</mrow>
+</math>
+Which we know is simply:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mn>10</mn>
+ </msub>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>e</mi>
+   </msub>
+   <msup>
+    <mi>z</mi>
+    <mfrac>
+     <mn>1</mn>
+     <mi>n</mi>
+    </mfrac>
+   </msup>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-249'>and this will give us the correct result on the new scale of z.</div>
+
+<div class='standard' id='magicparlabel-250'>And as our LL<sub class='script_subscript'>3</sub> scale is
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>y</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>e</mi>
+  <mi>x</mi>
+ </msup>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-255'>Our new scale LL<sub class='script_subscript'>2</sub> must be:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>z</mi>
+ <mo>=</mo>
+ <msup>
+  <mi>e</mi>
+  <mrow>
+   <mn>0.1</mn>
+   <mi>x</mi>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+Which is indeed what we have, and shows that if we use the C10 index to find a root, we have to drop down to the LL<sub class='script_subscript'>2</sub> scale to get the answer.</div>
+
+<div class='standard' id='magicparlabel-264'>It seems reasonable to think that for multiplication, using the C10 index means going up or down by a factor of 10, whereas on a LogLog scale it means going up or down by a power of 10.</div>
+
+<div class='standard' id='magicparlabel-265'>Usually a Slide Rule will have further scales, of <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mrow>
+  <mo>-</mo>
+  <mi>x</mi>
+ </mrow>
+</msup>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mrow>
+  <mo>-</mo>
+  <mn>0.1</mn>
+  <mi>x</mi>
+ </mrow>
+</msup>
+</math>
+ and <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>e</mi>
+ <mrow>
+  <mo>-</mo>
+  <mn>0.01</mn>
+  <mi>x</mi>
+ </mrow>
+</msup>
+</math>
+, these are marked in red, and instead of increasing from left to right, they decrease from left to right. Otherwise they operate in a very similar manner.</div>
+
+<div class='standard' id='magicparlabel-266'>The best way to explore this further is to try some calculations on a real Slide Rule, or on one of the web based simulations such as at [<a href='#LyXCite-emulator'><span class="bib-numericallabel">2</span></a>]</div>
+
+<div class='standard' id='magicparlabel-267'>In summary, Slide Rules are certainly obsolete, but they have a beauty to those who can appreciate it. If you find your grandparents old Slide Rule in an attic box, don&#8217;t throw it away, no one will ever make new ones again.</div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-268'><span class="section_label">4</span> Copyright</h2>
+<div class='standard' id='magicparlabel-269'>The Slide Rule © 2026 by Bernard Czenkusz is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/</div>
+
+<div class='standard' id='magicparlabel-270'>This license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.</div>
+<h2 class='bibliography'>References</h2>
+<div class='bibliography'>
+<div class='bibliography' id='magicparlabel-271'><a id='LyXCite-wikipedia' /><span class='bibitemlabel'>1</span><a href="https://en.wikipedia.org/wiki/Logarithm">https://en.wikipedia.org/wiki/Logarithm</a></div>
+
+<div class='bibliography' id='magicparlabel-272'><a id='LyXCite-emulator' /><span class='bibitemlabel'>2</span><a href="https://sliderules.lovett.com/new_wolf_simulators/webSimulator/index.html">https://sliderules.lovett.com/new_wolf_simulators/webSimulator/index.html</a></div>
+</div></section>
+</body>
+</html>
