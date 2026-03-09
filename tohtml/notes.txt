@@ -1,0 +1,18 @@
+I exported the lyx document using LyXHTML format.
+
+A few problems:
+
+The formulas had cramped vertical spacing, so in the Lyx doc, I added leading and trailing lines using ctrl Enter.
+
+I did this in a copy in the tohtml folder to avoid messing with the original.
+
+The result sliderule.xhtml had no margin, so text started at the extreme left. I created a body css, with a 20px left and right margin.
+
+Links in the reference and copyright sections did not appear as links, so I edited them manually, inserting <a> tags.
+
+The sliderule images had carried over width percent settings I had originally set for the pdf docs, which were too small for html. I did a search for 'image' throughout the document and changed width to 80%.  Except for the graph which I set to 60%.
+
+The docs folder needs the file to called index.html, so I changed the name from sliderule.xhtml when copied to the docs folder.
+
+
+
