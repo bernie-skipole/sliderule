@@ -113,16 +113,16 @@ To understand the action of a Slide Rule we have to start from Logarithms,
 Consider the two equations:
 \begin_inset Formula 
 \begin{align*}
-x & =b^{y}
+\\x & =b^{y}\\
 \end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-y=\log_{b}x
-\]
+\begin{align*}
+y & =\log_{b}x\\
+\end{align*}
 
 \end_inset
 
@@ -173,17 +173,17 @@ In this case
 
 So an example:
 \begin_inset Formula 
-\[
-8=2^{3}
-\]
+\begin{align*}
+\\8 & =2^{3}\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-3=\log_{2}8
-\]
+\begin{align*}
+3 & =\log_{2}8\\
+\end{align*}
 
 \end_inset
 
@@ -227,17 +227,17 @@ A point to notice is that no negative
 
  becomes less than 1.0
 \begin_inset Formula 
-\[
-0.5=2^{-1}
-\]
+\begin{align*}
+\\0.5 & =2^{-1}\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
--1=\log_{2}0.5
-\]
+\begin{align*}
+-1 & =\log_{2}0.5\\
+\end{align*}
 
 \end_inset
 
@@ -259,9 +259,9 @@ Given
 
  we have an identity we are going to use later:
 \begin_inset Formula 
-\[
-y=\log_{b}b^{y}
-\]
+\begin{align*}
+\\y & =\log_{b}b^{y}\\
+\end{align*}
 
 \end_inset
 
@@ -277,33 +277,33 @@ Here's the magic,
 ,
  so therefore:
 \begin_inset Formula 
-\[
-p=\log_{b}c
-\]
+\begin{align*}
+\\p & =\log_{b}c\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-q=\log_{b}d
-\]
+\begin{align*}
+q & =\log_{b}d\\
+\end{align*}
 
 \end_inset
 
 We know
 \begin_inset Formula 
-\[
-cd=b^{p}b^{q}=b^{p+q}
-\]
+\begin{align*}
+\\cd & =b^{p}b^{q}=b^{p+q}\\
+\end{align*}
 
 \end_inset
 
 To illustrate:
 \begin_inset Formula 
-\[
-8\times4=2^{3}\times2^{2}=2\times2\times2\times2\times2=2^{5}=32
-\]
+\begin{align*}
+\\8\times4 & =2^{3}\times2^{2}=2\times2\times2\times2\times2=2^{5}=32\\
+\end{align*}
 
 \end_inset
 
@@ -342,9 +342,9 @@ Taking the log of both sides,
 \color inherit
 
 \begin_inset Formula 
-\[
-\log_{b}cd=\log_{b}b^{p}b^{q}=\log_{b}b^{p+q}=p+q
-\]
+\begin{align*}
+\\\log_{b}cd & =\log_{b}b^{p}b^{q}=\log_{b}b^{p+q}=p+q\\
+\end{align*}
 
 \end_inset
 
@@ -358,9 +358,9 @@ But we know
 
  so lets go all the way
 \begin_inset Formula 
-\[
-\log_{b}cd=\log_{b}c+\log_{b}d
-\]
+\begin{align*}
+\\\log_{b}cd & =\log_{b}c+\log_{b}d\\
+\end{align*}
 
 \end_inset
 
@@ -401,17 +401,17 @@ As a school child,
 To continue,
  how about division:
 \begin_inset Formula 
-\[
-\frac{c}{d}=\frac{b^{p}}{b^{q}}=b^{p}b^{-q}=b^{p-q}
-\]
+\begin{align*}
+\\\frac{c}{d} & =\frac{b^{p}}{b^{q}}=b^{p}b^{-q}=b^{p-q}\\
+\end{align*}
 
 \end_inset
 
 And that leads to
 \begin_inset Formula 
-\[
-\log_{b}\frac{c}{d}=\log_{b}b^{p-q}=p-q=\log_{b}c-\log_{b}d
-\]
+\begin{align*}
+\\\log_{b}\frac{c}{d} & =\log_{b}b^{p-q}=p-q=\log_{b}c-\log_{b}d\\
+\end{align*}
 
 \end_inset
 
@@ -423,41 +423,41 @@ So division maps to subtraction,
 Now let's look at another sweet property.
  Starting again from:
 \begin_inset Formula 
-\[
-x=b^{y}
-\]
+\begin{align*}
+\\x & =b^{y}\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-x^{n}=b^{ny}
-\]
+\begin{align*}
+x^{n} & =b^{ny}\\
+\end{align*}
 
 \end_inset
 
 Take the log of both sides:
 \begin_inset Formula 
-\[
-\log_{b}x^{n}=\log_{b}b^{ny}
-\]
+\begin{align*}
+\\\log_{b}x^{n} & =\log_{b}b^{ny}\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\log_{b}x^{n}=ny
-\]
+\begin{align*}
+\log_{b}x^{n} & =ny\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\log_{b}x^{n}=n\log_{b}x
-\]
+\begin{align*}
+\log_{b}x^{n} & =n\log_{b}x\\
+\end{align*}
 
 \end_inset
 
@@ -490,9 +490,9 @@ And if we really want to push the boat out,
 
  multiplication with logs:
 \begin_inset Formula 
-\[
-\log_{a}(\log_{b}x^{n})=\log_{a}(n\log_{b}x)=\log_{a}n+\log_{a}(\log_{b}x)
-\]
+\begin{align*}
+\\\log_{a}(\log_{b}x^{n}) & =\log_{a}(n\log_{b}x)=\log_{a}n+\log_{a}(\log_{b}x)\\
+\end{align*}
 
 \end_inset
 
@@ -506,10 +506,6 @@ I've introduced another base
 \end_inset
 
  again.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -590,17 +586,17 @@ Let's dive a bit deeper into that base number
 \begin_layout Standard
 Starting from these two again:
 \begin_inset Formula 
-\[
-y=\log_{b}x
-\]
+\begin{align*}
+\\y & =\log_{b}x\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-x=b^{y}
-\]
+\begin{align*}
+x & =b^{y}\\
+\end{align*}
 
 \end_inset
 
@@ -610,33 +606,33 @@ Take the log (with base
 
 ) of both sides
 \begin_inset Formula 
-\[
-\log_{c}x=\log_{c}b^{y}
-\]
+\begin{align*}
+\\\log_{c}x & =\log_{c}b^{y}\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\log_{c}x=y\log_{c}b
-\]
+\begin{align*}
+\log_{c}x & =y\log_{c}b\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\frac{\log_{c}x}{\log_{c}b}=y
-\]
+\begin{align*}
+\frac{\log_{c}x}{\log_{c}b} & =y\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\frac{\log_{c}x}{\log_{c}b}=\log_{b}x
-\]
+\begin{align*}
+\frac{\log_{c}x}{\log_{c}b} & =\log_{b}x\\
+\end{align*}
 
 \end_inset
 
@@ -756,9 +752,9 @@ Given an
 
  value in this range of 1 to 10:
 \begin_inset Formula 
-\[
-0\leqq\log x\leqq1
-\]
+\begin{align*}
+\\0 & \leqq\log x\leqq1\\
+\end{align*}
 
 \end_inset
 
@@ -768,25 +764,25 @@ So what about
 
 ?
 \begin_inset Formula 
-\[
-\log10x=\log10+\log x=1+\log x
-\]
+\begin{align*}
+\\\log10x & =\log10+\log x=1+\log x\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-1\leqq\log10x\leqq2
-\]
+\begin{align*}
+\\1 & \leqq\log10x\leqq2\\
+\end{align*}
 
 \end_inset
 
 and it follows
 \begin_inset Formula 
-\[
-3\leqq\log100x\leqq4
-\]
+\begin{align*}
+\\3 & \leqq\log100x\leqq4\\
+\end{align*}
 
 \end_inset
 
@@ -1012,9 +1008,9 @@ By setting the 10 on to 7,
 .
  So we have actually done:
 \begin_inset Formula 
-\[
-\log7-\log10+\log2=\log\frac{7\times2}{10}
-\]
+\begin{align*}
+\\\log7-\log10+\log2 & =\log\frac{7\times2}{10}\\
+\end{align*}
 
 \end_inset
 
@@ -1045,9 +1041,9 @@ Division
 \begin_layout Standard
 We know division maps to subtraction with logs.
 \begin_inset Formula 
-\[
-\log\frac{c}{d}=\log c-\log d
-\]
+\begin{align*}
+\\\log\frac{c}{d} & =\log c-\log d\\
+\end{align*}
 
 \end_inset
 
@@ -1146,9 +1142,9 @@ However the 10 on C scale shows 7.5 on D,
 
  takes you to C10.
 \begin_inset Formula 
-\[
-\log6-\log8+\log10=\log\frac{6\times10}{8}
-\]
+\begin{align*}
+\\\log6-\log8+\log10 & =\log\frac{6\times10}{8}\\
+\end{align*}
 
 \end_inset
 
@@ -1333,9 +1329,9 @@ Powers
 Going right back to the section describing logs,
  we had the result:
 \begin_inset Formula 
-\[
-\log_{b}y^{n}=n\log_{b}y
-\]
+\begin{align*}
+\\\log_{b}y^{n} & =n\log_{b}y\\
+\end{align*}
 
 \end_inset
 
@@ -1352,9 +1348,9 @@ I've used a variable
  and,
  taking logs of both sides:
 \begin_inset Formula 
-\[
-\log_{a}(\log_{b}y^{n})=\log_{a}(n\log_{b}y)=\log_{a}n+\log_{a}(\log_{b}y)
-\]
+\begin{align*}
+\\\log_{a}(\log_{b}y^{n}) & =\log_{a}(n\log_{b}y)=\log_{a}n+\log_{a}(\log_{b}y)\\
+\end{align*}
 
 \end_inset
 
@@ -1369,9 +1365,9 @@ Our Slide Rule uses
  to multiply two numbers,
  so this becomes:
 \begin_inset Formula 
-\[
-\log_{10}(\log_{b}y^{n})=\log_{10}n+\log_{10}(\log_{b}y)
-\]
+\begin{align*}
+\\\log_{10}(\log_{b}y^{n}) & =\log_{10}n+\log_{10}(\log_{b}y)\\
+\end{align*}
 
 \end_inset
 
@@ -1429,9 +1425,9 @@ If
  values,
  such that:
 \begin_inset Formula 
-\[
-x=\log_{b}y
-\]
+\begin{align*}
+\\x & =\log_{b}y\\
+\end{align*}
 
 \end_inset
 
@@ -1441,9 +1437,9 @@ x=\log_{b}y
 \begin_layout Standard
 Or in other words a scale of:
 \begin_inset Formula 
-\[
-b^{x}
-\]
+\begin{align*}
+\\b^{x}\\
+\end{align*}
 
 \end_inset
 
@@ -1457,25 +1453,25 @@ So there's a question of how to choose the base
  we can take them or leave them.
  Alas no longer:
 \begin_inset Formula 
-\[
-2^{0.3}=1.2311...
-\]
+\begin{align*}
+\\2^{0.3} & =1.2311...\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-2^{3}=8
-\]
+\begin{align*}
+2^{3} & =8\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-2^{30}=1073741824
-\]
+\begin{align*}
+2^{30} & =1073741824\\
+\end{align*}
 
 \end_inset
 
@@ -2014,9 +2010,9 @@ So that's how it works,
  now a bit more on why.
  Back to:
 \begin_inset Formula 
-\[
-\log_{10}(\log_{e}y^{n})=\log_{10}n+\log_{10}(\log_{e}y)
-\]
+\begin{align*}
+\\\log_{10}(\log_{e}y^{n}) & =\log_{10}n+\log_{10}(\log_{e}y)\\
+\end{align*}
 
 \end_inset
 
@@ -2032,17 +2028,17 @@ Another nice result,
  for a square root,
  the above becomes:
 \begin_inset Formula 
-\[
-\log_{10}(\log_{e}y^{\frac{1}{n}})=\log_{10}\frac{1}{n}+\log_{10}(\log_{e}y)
-\]
+\begin{align*}
+\\\log_{10}(\log_{e}y^{\frac{1}{n}}) & =\log_{10}\frac{1}{n}+\log_{10}(\log_{e}y)\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\log_{10}(\log_{e}y^{\frac{1}{n}})=\log_{10}1-\log_{10}n+\log_{10}(\log_{e}y)
-\]
+\begin{align*}
+\\\log_{10}(\log_{e}y^{\frac{1}{n}}) & =\log_{10}1-\log_{10}n+\log_{10}(\log_{e}y)\\
+\end{align*}
 
 \end_inset
 
@@ -2056,9 +2052,9 @@ But
 
  is just zero.
 \begin_inset Formula 
-\[
-\log_{10}(\log_{e}y^{\frac{1}{n}})=-\log_{10}n+\log_{10}(\log_{e}y)
-\]
+\begin{align*}
+\\\log_{10}(\log_{e}y^{\frac{1}{n}}) & =-\log_{10}n+\log_{10}(\log_{e}y)\\
+\end{align*}
 
 \end_inset
 
@@ -2128,9 +2124,9 @@ To subtract
 ,
  and doing:
 \begin_inset Formula 
-\[
-\log_{10}(\log_{e}y)-\log_{10}n+\log_{10}10
-\]
+\begin{align*}
+\\\log_{10}(\log_{e}y)-\log_{10}n+\log_{10}10\\
+\end{align*}
 
 \end_inset
 
@@ -2146,17 +2142,17 @@ But we cannot ignore powers of 10,
 ,
  we are actually getting:
 \begin_inset Formula 
-\[
-\log_{10}(10\log_{e}y)-\log_{10}n
-\]
+\begin{align*}
+\\\log_{10}(10\log_{e}y)-\log_{10}n\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\log_{10}(\log_{e}y^{10})-\log_{10}n
-\]
+\begin{align*}
+\log_{10}(\log_{e}y^{10})-\log_{10}n\\
+\end{align*}
 
 \end_inset
 
@@ -2183,9 +2179,9 @@ Putting y=6 and n=2 into this,
  scale.
  Hence we need another scale:
 \begin_inset Formula 
-\[
-z=y^{0.1}
-\]
+\begin{align*}
+\\z & =y^{0.1}\\
+\end{align*}
 
 \end_inset
 
@@ -2195,17 +2191,17 @@ z=y^{0.1}
 \begin_layout Standard
 So we are back to:
 \begin_inset Formula 
-\[
-\log(\log_{e}z)-\log_{10}n
-\]
+\begin{align*}
+\\\log(\log_{e}z)-\log_{10}n\\
+\end{align*}
 
 \end_inset
 
 Which we know is simply:
 \begin_inset Formula 
-\[
-\log_{10}(\log_{e}z^{\frac{1}{n}})
-\]
+\begin{align*}
+\\\log_{10}(\log_{e}z^{\frac{1}{n}})\\
+\end{align*}
 
 \end_inset
 
@@ -2228,9 +2224,9 @@ And as our LL
 
  scale is
 \begin_inset Formula 
-\[
-y=e^{x}
-\]
+\begin{align*}
+\\y & =e^{x}\\
+\end{align*}
 
 \end_inset
 
@@ -2249,9 +2245,9 @@ Our new scale LL
 
  must be:
 \begin_inset Formula 
-\[
-z=e^{0.1x}
-\]
+\begin{align*}
+\\z & =e^{0.1x}\\
+\end{align*}
 
 \end_inset
 

@@ -113,16 +113,16 @@ To understand the action of a Slide Rule we have to start from Logarithms,
 Consider the two equations:
 \begin_inset Formula 
 \begin{align*}
-x & =b^{y}
+\\x & =b^{y}\\
 \end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-y=\log_{b}x
-\]
+\begin{align*}
+y & =\log_{b}x\\
+\end{align*}
 
 \end_inset
 
@@ -173,17 +173,17 @@ In this case
 
 So an example:
 \begin_inset Formula 
-\[
-8=2^{3}
-\]
+\begin{align*}
+\\8 & =2^{3}\\
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-3=\log_{2}8
-\]
+\begin{align*}
+3 & =\log_{2}8\\
+\end{align*}
 
 \end_inset
 
