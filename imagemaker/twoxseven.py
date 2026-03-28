@@ -1,6 +1,6 @@
 
 
-from working import Rule
+from slideruleimages import Rule
 
 
 if __name__ == "__main__":

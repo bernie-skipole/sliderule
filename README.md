@@ -14,7 +14,14 @@ A typical image generated is
 
 ![Test image](https://raw.githubusercontent.com/bernie-skipole/sliderule/main/twoxthree.svg)
 
-These images were generated with the Python scripts and package under the 'imagemaker' directory. Inspection of those scripts will show how an image is created.
+
+These images were generated with the Python scripts and package slideruleimages available from Pypi at:
+
+https://pypi.org/project/slideruleimages/
+
+https://github.com/bernie-skipole/slideruleimages
+
+Inspection of the scripts will show how an image is created.
 
 The Python software is MIT licensed. The images are public domain, and as the software generates the images, new ones can be created at will from the Python program.
 
@@ -24,13 +31,4 @@ The Slide Rule  © 2026 by Bernard Czenkusz is licensed under CC BY 4.0. To view
 
 This license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.
 
-Note:
-
-After this was completed, the python code was placed on Pypi and is available at:
-
-https://pypi.org/project/slideruleimages/
-
-https://github.com/bernie-skipole/slideruleimages
-
-The original code used for the documentation is left in this repository, any future development will be done on the slideruleimages repository.
 
